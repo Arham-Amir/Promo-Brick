@@ -17,7 +17,7 @@ export default function Categories() {
               <Link href= {item[3]}>
                 <div className="transparent border-t-8 px-3 pb-1 bg-gray-800/[0.7] hover:cursor-pointer group-hover:bg-transparent group-hover:bg-gradient-to-b from-transparent via-gray-800/[0.3] to-gray-800/[0.7]" style={{ borderColor: item[0] }}>
                   <div className="flex flex-col justify-evenly">
-                    <div className="font-bold text-3xl my-3 group-hover:translate-y-48">{item[1]}</div>
+                    <div className="font-bold text-2xl my-3 group-hover:translate-y-48">{item[1]}</div>
                     <hr className="mr-5 border-t-4 group-hover:translate-y-48" style={{ borderColor: item[0] }} />
                     <div className="text-lg font-semibold h-36 group-hover:invisible my-9">{item[2]}</div>
                     <div className="flex justify-between mr-5 mb-5">
