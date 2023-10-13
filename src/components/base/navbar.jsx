@@ -62,7 +62,7 @@ const Navbar = () => {
         className={`${ham ? 'flex' : 'hidden'}
         xs:fixed xs:top-[14vh] z-50 w-full xs:h-[86vh] transition-all duration-500 justify-center flex-col items-center gap-10 xs:bg-white`} />
     </section>
-    <section ref={navRef2} className="bg-black w-screen fixed top-0 z-40 xs:text-[7px] md:text-sm">
+    <section ref={navRef2} className="bg-black w-screen h-[7vh] fixed top-0 z-40 xs:text-[7px] md:text-sm">
       <Nav_Links childClass2="p-3" className="text-white flex items-center justify-center "></Nav_Links>
     </section>
   </>
