@@ -4,9 +4,9 @@ export default function Categories() {
   const content = [
     ['#EC6839', 'Building Bricks', "Supporting builders' merchants nationwide", '/page2'],
     ['#62A86B', 'Facing Bricks', "Inovative design, traditional solutions", '/page3'],
-    ['#F2A644', 'Floor Tiles', "Complete aesthetic build solutions", '#'],
-    ['#9BD3C4', 'Slips', "Everyting for building, renovating, or extending your own home", '#'],
-    ['#AB8FE5', 'Pots', "Quality products for quality builds", '#'],
+    ['#F2A644', 'Floor Tiles', "Complete aesthetic build solutions", '/page4'],
+    ['#9BD3C4', 'Slips', "Everyting for building, renovating, or extending your own home", '/page5'],
+    ['#AB8FE5', 'Pots', "Quality products for quality builds", '/page6'],
   ]
   return (
     <div className='relative bg-gray-700'>

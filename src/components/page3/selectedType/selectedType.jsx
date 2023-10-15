@@ -1,15 +1,12 @@
-'use client'
-import { useState } from "react";
-import { FcNext, FcPrevious } from "react-icons/fc";
+import SelectedImage from "./selectedImage";
 
 const SelectedType = (props = {}) => {
-  const [curImg, setcurImg] = useState(0);
   return (
     <section className="p-10 flex-1 mx-auto">
       <h1 className="w-fit mx-auto text-3xl py-2 px-4 text-black">Hand Made</h1>
       <p className="w-20 p-[2px] mx-auto bg-black"></p>
       {props.data.map((data, index) => {
-        return <section key={index} className="mt-8 pr-16 flex flex-row items-center justify-center w-full text-black">
+        return <section key={index} className="shadow-md shadow-black p-5 mt-8  flex flex-row items-center justify-center w-full text-black">
           <section className="flex-1 flex flex-col gap-5 items-center">
             <h1 className="text-2xl font-semibold">{data['Name']}</h1>
             <section className="flex flex-col gap-2">
@@ -24,11 +21,7 @@ const SelectedType = (props = {}) => {
               })}
             </section>
           </section>
-          <section style={{ "backgroundImage": `url(${data['Img'][(curImg + 1) % data['Img'].length]})` }} className="flex-1 py-8 bg-bgDark relative bg-cover bg-blend-lighten">
-            <FcPrevious onClick={() => curImg == 0 ? setcurImg(data['Img'].length - 1) : setcurImg(curImg - 1)} className="cursor-pointer absolute top-1/2 -translate-y-1/2 left-2 text-4xl z-30" />
-            <img className="-translate-x-8 border-2 border-white w-[98%] h-[300px] object-cover" src={data['Img'][curImg]} alt="image not found" />
-            <FcNext onClick={() => setcurImg((curImg + 1) % data['Img'].length)} className="cursor-pointer absolute top-1/2 -translate-y-1/2 right-2 text-4xl z-30" />
-          </section>
+          <SelectedImage data={data} />
         </section>
       })}
 

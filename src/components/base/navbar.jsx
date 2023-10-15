@@ -47,7 +47,7 @@ const Navbar = () => {
   }, [ham]);
 
   return (<>
-    <section ref={navRef} className={`bg-black ${ham ? 'h-[14vh]' : 'h-[14vh]'}  flex flex-col z-50 w-screen backdrop-blur-[1px]`}>
+    <section ref={navRef} className={`${ham ? 'h-[14vh]' : 'h-[14vh]'}  flex flex-col z-50 w-screen backdrop-blur-[1px]`}>
       <nav className="bg-white h-full w-full 2xl:h-28 text-black py-3 lg:pl-8 lg:pr-12 xl:pl-10 xl:pr-24 sm:px-10 xs:px-4 lg:text-md 2xl:text-xl 3xl:text-2xl flex items-center justify-between font-sans relative">
         <Nav_Logo></Nav_Logo>
         <Nav_Links childClass1 = "gap-3" childClass2="px-3 py-1" className='xs:hidden md:flex md:justify-between w-full md:gap-7 lg:gap-12 font-semibold' />

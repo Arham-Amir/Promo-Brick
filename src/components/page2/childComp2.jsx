@@ -72,22 +72,27 @@ export default function ChildComp2() {
   return (
     <div className='bg-white'>
       {/* FRONT BANNER */}
-      <div className="flex h-[86vh]">
-        <div className="w-1/2 px-7 bg-gray-300 flex flex-col justify-center gap-6">
-          <h1 className="text-3xl font-bold">All Range of Quality Of Bricks</h1>
-          <p className="text-lg font-medium w-11/12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam necessitatibus culpa incidunt accusamus consequuntur eos commodi laboriosam?
-          </p>
-          <button className="border-2 font-bold border-black px-10 py-3 w-fit text-lg">See Below</button>
+      <div className="flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[86vh]">
+        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 bg-gray-300 px-7 flex flex-col justify-center gap-6">
+          {/* Add a pseudo-element with a transparent background */}
+          <div className="absolute bg-cover md:hidden inset-0 bg-black opacity-50 z-10" />
+
+          <div className="relative z-20 flex flex-col gap-3">
+            <h1 className="text-3xl font-bold">All Range of Quality Of Bricks</h1>
+            <p className="text-lg font-medium w-11/12">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam necessitatibus culpa incidunt accusamus consequuntur eos commodi laboriosam?</p>
+            <button className="border-2 font-bold border-black px-10 py-3 w-fit text-lg mt-3">See Below</button>
+          </div>
         </div>
-        <div className="w-1/2">
+
+        <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2">
           <img className="h-full w-full object-cover" src="Images/brick.jpg" alt="Brick Man" />
         </div>
       </div>
       {/* BRICKS TYPES */}
-      <div className="bg-gray-300 mt-8">
-        <div className="bg-[url('/images/bgtypes.png')] text-white bg-cover p-7 text-center flex flex-col gap-7">
-          <h1 className="mx-auto sm:text-center font-bold text-4xl">Types Of Bricks</h1>
-          <div className="sm:flex sm:flex-nowrap italic text-2xl justify-evenly mt-3 font-semibold">
+      <div className="my-8 bg-[url('/images/bgtypes.png')]">
+        <div className="text-white bg-cover p-7 text-center flex flex-col xs:gap-4 md:gap-7">
+          <h1 className="mx-auto my-0 sm:text-center font-bold text-4xl">Types Of Bricks</h1>
+          <div className="w-[93%] flex flex-wrap md:flex-row flex-col gap-3 italic text-2xl justify-evenly mt-1 font-semibold">
             <p>Awal Bricks</p>
             <p>Doum Bricks</p>
             <p>Khinger Bricks</p>
@@ -98,15 +103,11 @@ export default function ChildComp2() {
       </div>
       {/* TILES OF BRICKS TYPES */}
       {contentarray.map((item, index) => (
-        <div
-          className={`bg-[url('/images/typesbg.png')]  sm:flex sm:flex-row my-8 w-full ${index % 2 === 1 ? 'sm:flex-row-reverse' : ''
-            }`}
-          key={index}
-        >
-          <div className="w-full sm:w-1/2 p-5">
+        <div className={`bricktypes bg-[url('/images/typesbg.png')] itemd-center sm:flex xs:flex-col xs:justify-center md:flex-row my-8 w-full ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`} key={index}>
+          <div className="w-full md:w-1/2 p-0 md:p-5">
             <Slideshow images={item[0]} />
           </div>
-          <div className="w-full sm:w-1/2 flex flex-col justify-center py-3">
+          <div className="w-full md:w-1/2 flex flex-col justify-center p-3 sm:py-3">
             <h1 className="text-center text-3xl font-bold py-2">{item[1]}</h1>
             <div className="text-xl bg-gray-300 p-3 m-3 rounded-lg">
               <h2 className="font-bold underline">Specifications:</h2>
@@ -124,15 +125,15 @@ export default function ChildComp2() {
                 </table>
               </div>
             </div>
-            <div className={`flex flex-col ${index%2 == 0 ? 'items-start': 'items-end'} gap-5 m-3 text-sm sm:text-lg`}>
+            <div className="flex justify-end">
               <div className="flex border-2 border-black justify-between px-3 py-1 w-fit mx-2">
-                <button className='text-sm' onClick={() => decrementNumber(index)}>
-                  <AiOutlineMinus />
-                </button>
-                <button className="text-xl sm:text-2xl px-5 font-bold">{numbers[index]}</button>
-                <button className='text-sm' onClick={() => incrementNumber(index)}>
-                  <AiOutlinePlus />
-                </button>
+                    <button className='text-sm' onClick={() => decrementNumber(index)}>
+                        <AiOutlineMinus />
+                    </button>
+                    <button className="text-xl sm:text-2xl px-5 font-bold">{numbers[index]}</button>
+                    <button className='text-sm' onClick={() => incrementNumber(index)}>
+                        <AiOutlinePlus />
+                    </button>
               </div>
               <button className="bg-gray-800 text-white px-9 py-3 mx-2 w-fit">
                 Add To Cart
