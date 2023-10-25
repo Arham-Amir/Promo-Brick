@@ -17,11 +17,24 @@ module.exports = {
         '2xl': '1600px',
         '3xl': '2000px',
       },
+      fontFamily: {
+        text: ['var(--font-text)'],
+        heading: ['var(--font-heading)']
+      },
       colors: {
-        'themeColor': '#FAB702',
-        'darkColor': "#cd2122",
-        'bgLight': "rgb(226, 232, 240)",
+        // 'themeColor': '#FAB702',
+        // 'themeColor': '#F1A208',
+        // 'darkColor': "#393939",
+        // 'bgLight': "rgb(226, 232, 240)",
+        // 'themeColor': "#8C0505",red
+        // 'themeColor': "#F1A208",
+        'themeColor': "#F1A208",
+        'darkColor': '#393939',
+        'bgLight': "#CCCACA",
+
+        'textColor': "#052F5F",
         'bgDark': "rgb(55, 65, 81)",
+        'bg' : "#f2f2f2"
       },
     },
   },

@@ -1,9 +1,19 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Figtree, Glass_Antiqua } from 'next/font/google'
 import Navbar from '@components/base/navbar'
 import Footer from '@components/base/footer/footer'
+import ContactUs from '@components/base/contactUs/contactUs'
 
 const inter = Inter({ subsets: ['latin'] })
+const figtree = Figtree({
+  subsets: ['latin'],
+  variable: '--font-text'
+})
+const glass = Glass_Antiqua({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  weight:'400',
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,9 +23,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-x-hidden max-w-screen`}>
+      <body className={`${glass.variable} ${figtree.variable} ${inter.className} overflow-x-hidden max-w-screen font-text bg-bg`}>
         <Navbar />
         {children}
+        {/* <ContactUs /> */}
         <Footer />
       </body>
     </html>

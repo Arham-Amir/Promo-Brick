@@ -7,11 +7,13 @@ const Carousel = () => {
   const ref = useRef(null);
   const refImage = useRef([]);
   const images = [
-    '/images/slider1.jpg',
-    '/images/slider2.jpg',
-    '/images/slider3.jpg',
-    '/images/slider4.jpg',
-    '/images/slider5.jpg',
+    '/images/slider1.png',
+    '/images/slider2.png',
+    '/images/slider3.png',
+    '/images/slider4.png',
+    '/images/slider5.png',
+    '/images/slider6.png',
+    '/images/slider7.png',
   ];
 
   const handleLeftClick = () => {
@@ -54,28 +56,28 @@ const Carousel = () => {
   }, [slideno]);
 
   return (
-    <section className="h-[100vh] mx-0 max-w-screen overflow-x-hidden relative bg-white">
+    <section className="xs:h-[70vh] md:h-[100vh] mx-0 w-screen overflow-x-hidden z-10 relative">
       <section ref={ref} className="h-full flex flex-row flex-nowrap w-full overflow-x-scroll custom-scroll">
         <FcPrevious onClick={handleLeftClick} className="cursor-pointer absolute top-1/2 -translate-y-1/2 left-2 text-4xl z-30" />
-        <section
-          className={`grayscale-[25] border-y-2 border-r-2 border-slate-300 min-w-[15%] h-full`}
+        {/* <section
+          className={`grayscale-[25] border-y-2 border-r-2 border-slate-300 min-w-[10%] h-full`}
         >
           <img src={images[images.length - 1]} alt={`image -1`} className="object-cover h-full w-full" />
-        </section>
+        </section> */}
         {images.map((el, i) => (
           <section
             key={i}
             ref={(el) => (refImage.current[i] = el)}
-            className={`${i == slideno ? 'grayscale-0': 'grayscale-[25]'}  border-2 border-slate-300 min-w-[70%] h-full`}
+            className={`${i == slideno ? 'grayscale-0': 'grayscale-[25]'} min-w-[100%] h-full`}
           >
             <img src={el} alt={`image ${i + 1}`} className="object-cover h-full w-full" />
           </section>
         ))}
-        <section
-          className={`grayscale-[25] border-y-2 border-r-2 border-slate-300 min-w-[15%] h-full`}
+        {/* <section
+          className={`grayscale-[25] border-y-2 border-r-2 border-slate-300 min-w-[10%] h-full`}
         >
           <img src={images[0]} alt={`image -1`} className="object-cover h-full w-full" />
-        </section>
+        </section>*/}
         <FcNext onClick={handleRightClick} className="cursor-pointer absolute top-1/2 -translate-y-1/2 right-2 text-4xl z-30" />
       </section>
     </section>

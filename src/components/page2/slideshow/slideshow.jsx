@@ -13,11 +13,11 @@ const Slideshow = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full border-4 border-bgLight"> {/* Adjusted to half screen width */}
+    <div className="relative w-full h-full border-4 border-bg rounded-3xl shadow-lg shadow-black"> {/* Adjusted to half screen width */}
       {/* Full-width images with number and caption text */}
-      <div className="w-full">
+      <div className="w-full h-full">
         <img
-          className="w-full"
+          className="w-full h-full object-cover rounded-3xl"
           src={images[currentSlide]}
           alt={`Slide ${currentSlide + 1}`}
         />
