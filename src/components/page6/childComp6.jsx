@@ -60,11 +60,6 @@ export default function ChildComp6() {
       "Color": "Natural",
       "Notes": "Sets of 4 pots"
     }, ["/Pots/11.jpg"]],
-    ["Simple plain in Cylinderical shape with Saucers", {
-      "Size": '18"-8"/16"-8"',
-      "Color": "Natural",
-      "Notes": "Sets of 5 pots"
-    }, ["/Pots/12.jpg"]],
     ["Simple plain in Conical shaped", {
       "Size": '24"/28"',
       "Color": "Natural",
@@ -75,28 +70,13 @@ export default function ChildComp6() {
       "Color": "Natural",
       "Notes": "Sets of 5 pots"
     }, ["/Pots/14.jpg"]],
+    ["Simple plain in Cylinderical shape with Saucers", {
+      "Size": '18"-8"/16"-8"',
+      "Color": "Natural",
+      "Notes": "Sets of 5 pots"
+    }, ["/Pots/12.jpg"]],
   ]
   const specialPots = [
-    ["Bowl shaped with handle", {
-      "Size": '12"/06"',
-      "Color": "Natural",
-      "Notes": "Sets of 3 pots"
-    }, ["/Pots/22.jpg"]],
-    ["Leaf style with special texture", {
-      "Size": '14"/12"',
-      "Color": "Textured",
-      "Notes": "Sets of 3 pots"
-    }, ["/Pots/23.jpg"]],
-    ["Plain Painted", {
-      "Size": '16"-8"/12"-8"',
-      "Color": "Painted",
-      "Notes": "Sets of 3 pots"
-    }, ["/Pots/24.jpg"]],
-    ["Special Desgined Narrow base wirh color style", {
-      "Size": '16"24"',
-      "Color": "Natural",
-      "Notes": "Single"
-    }, ["/Pots/17.jpg"]],
     ["Special Painted", {
       "Size": '16"/18"',
       "Color": "White Painted",
@@ -107,11 +87,31 @@ export default function ChildComp6() {
       "Color": "White Painted",
       "Notes": "Sets of 4 pots"
     }, ["/Pots/19.jpg"]],
+    ["Plain Painted", {
+      "Size": '16"-8"/12"-8"',
+      "Color": "Painted",
+      "Notes": "Sets of 3 pots"
+    }, ["/Pots/24.jpg"]],
+    ["Bowl shaped with handle", {
+      "Size": '12"/06"',
+      "Color": "Natural",
+      "Notes": "Sets of 3 pots"
+    }, ["/Pots/22.jpg"]],
+    ["Leaf style with special texture", {
+      "Size": '14"/12"',
+      "Color": "Textured",
+      "Notes": "Sets of 3 pots"
+    }, ["/Pots/23.jpg"]],
     ["Special Desgined Narrow base", {
       "Size": '20"/26"',
       "Color": "Natural",
       "Notes": "Single"
     }, ["/Pots/20.jpg"]],
+    ["Special Desgined Narrow base wirh color style", {
+      "Size": '16"24"',
+      "Color": "Natural",
+      "Notes": "Single"
+    }, ["/Pots/17.jpg"]],
   ]
   const urnPots = [
     ["Bottle Shapped Urn", {
