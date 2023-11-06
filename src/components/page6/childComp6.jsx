@@ -2,6 +2,8 @@
 import Category from './category/category';
 import { FaHome } from 'react-icons/fa'
 import { AiFillQuestionCircle } from 'react-icons/ai'
+import Image from 'next/image';
+import LazyImage from '@components/base/lazyImage';
 
 export default function ChildComp6() {
   const simplePots = [
@@ -163,24 +165,25 @@ export default function ChildComp6() {
         </section>
       </section>
 
-      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-11/12 mx-auto px-5 py-2 my-8">
+      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2
      px-7 flex flex-col justify-center items-end gap-6">
-          <div className="relative z-20 flex flex-col gap-5">
+          <div className="relative z-20 flex flex-col gap-5 w-full">
             <h1 className="text-5xl font-bold font-heading">Clay Pots</h1>
-            <p className="text-base font-medium w-11/12 font-text">
+            <p className="text-base font-medium w-full md:w-11/12 font-text">
               Clay pots are an ancient material that has been used in the humblest of plant pots but also features in historical art like the Dynasty terracotta army.The material is fairly simple, just clay-based, but growing in terracotta has some benefits over plastic and other types of pots.
             </p>
-            <p className="text-base font-medium w-11/12 font-text">
+            <p className="text-base font-medium w-full md:w-11/12 font-text">
               Clay pots provide a healthy environment for most plants. The porosity of clay allows air and moisture to penetrate the sides of the pot. This moisture and air is utilized by the fine roots located at the edge of the soil ball. Clay pots also act like a wick to remove excess moisture from the potting soil.
             </p>
-            <p className="text-base font-medium w-11/12 font-text">
+            <p className="text-base font-medium w-full md:w-11/12 font-text">
               There are no toxic materials or chemicals that go into the making of clay pots. It is eco-friendly, and safe to use even on all kitchen appliances and can be used with all types of foods as well.
             </p>
           </div>
         </div>
-        <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
-          <img className="h-full w-full object-cover rounded-lg" src="/Pots/pots.jpg" alt="Brick Man" />
+        <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
+          <LazyImage
+             className="h-full w-full object-cover rounded-lg" src="/Pots/pots.jpg" />
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import LazyImage from "@components/base/lazyImage";
 
 const SelectedType = (props = {}) => {
   return (
@@ -26,19 +27,14 @@ const SelectedType = (props = {}) => {
           {/* <button className="px-5 py-3 w-fit bg-themeColor text-white rounded-2xl">View Types</button> */}
         </section>
         <section className="w-[40%] h-[65%] rounded-2xl relative bg-white mx-5 shadow-md border-4 border-white">
-          <img loading="lazy" src={props.data['img']} className="mx-auto w-11/12 h-full object-fill" alt="" />
-          {/* <section className="w-full h-full absolute top-0 bg-darkColor/50"></section> */}
+          <LazyImage src={props.data['img']} className="mx-auto w-11/12 h-full object-fill" />
         </section>
       </section>
       <div className="my-8 bg-[url('/images/bgtypes.png')]">
-      {/*  */}
-        {/* <div className="text-white bg-cover p-14 text-center flex flex-col xs:gap-4 md:gap-7">
-          <h1 className="font-heading mx-auto my-0 sm:text-center font-bold text-4xl">Categories Of Brick</h1>
-        </div> */}
       </div>
       <section className="my-5">
         {props.data['data'].map((el, i) => {
-          return <FurtherType key={i} data = {el}/>
+          return <FurtherType key={i} data={el} />
         })}
       </section>
     </section>
@@ -47,26 +43,16 @@ const SelectedType = (props = {}) => {
 
 export default SelectedType;
 
-function FurtherType(props ={}) {
+function FurtherType(props = {}) {
   return (
     <section className="w-full my-5">
       <section className="w-full flex flex-col gap-3 text-white">
         <h1 className="text-4xl font-heading font-bold text-darkColor">{props.data['Name']} :</h1>
         <section className="flex flex-row gap-5 p-5 m-5">
-         <section className="flex-1 bg-darkColor"> <img className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][0]} alt="brickImage" /></section>
-         <section className="flex-1 bg-darkColor"> <img className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][1]} alt="brickImage" /></section>
+          <section className="flex-1 bg-darkColor"> <LazyImage className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][0]}/></section>
+          <section className="flex-1 bg-darkColor"> <LazyImage className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][1]}/></section>
         </section>
       </section>
     </section>
-    // <section className="w-full my-5">
-    //   <section className="w-full flex flex-col gap-3 text-white rounded-2xl bg-bg">
-    //     <h1 className="text-4xl font-heading font-bold bg-darkColor p-3 text-center rounded-t-2xl">{props.data['Name']} :</h1>
-    //     <section className="flex flex-row gap-5 p-5 m-5">
-    //       <img className="shadow-sm shadow-black h-[300px] object-fill flex-1 rounded-2xl" src={props.data['Img'][0]} alt="brickImage" />
-    //       <div className="p-1 min-h-full rounded-full bg-darkColor"></div>
-    //       <img className="shadow-sm shadow-black h-[300px] object-fill flex-1 rounded-2xl" src={props.data['Img'][1]} alt="brickImage" />
-    //     </section>
-    //   </section>
-    // </section>
   )
 }

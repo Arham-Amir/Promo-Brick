@@ -2,6 +2,7 @@
 import { useState } from "react";
 import SelectedType from "./selectedType/selectedType";
 import Types from "./types/types";
+import LazyImage from "@components/base/lazyImage";
 
 const ChildComp = () => {
   const [type, settype] = useState('Handmade Red');
@@ -102,19 +103,19 @@ const ChildComp = () => {
         <Types data={Object.keys(data)} settype={(t) => settype(t)} type={type} />
         <SelectedType data={data[type]} type={type} />
       </section>
-      <div className="bg-white flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-11/12 mx-auto px-5 py-2 my-8">
+      <div className="bg-white flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
-          {/* Add a pseudo-element with a transparent background */}
           <div className="absolute bg-cover md:hidden inset-0 bg-black opacity-50 z-10" />
-          <div className="relative z-20 flex flex-col gap-5">
+          <div className="relative z-20 flex flex-col gap-5 w-full">
             <h1 className="text-5xl font-bold font-heading">Facing Brick</h1>
-            <p className="text-base font-medium w-11/12 font-text">
+            <p className="text-base font-medium w-full md:w-11/12 font-text">
               Facing bricks, as the name implies, are manufactured to be used as facing, i.e. as the exterior of the wall. These bricks are different from other structural brickwork and carry a very clean and even appearance. Since their primary use is to make the look of the building aesthetic and pleasant, facing bricks are made of different kinds of materials, mainly clay.
             </p>
           </div>
         </div>
-        <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
-          <img className="h-full w-full object-cover  rounded-lg" src="/Facing/facing.jpg" alt="Brick Man" />
+        <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
+          <LazyImage
+           className="h-full w-full object-cover  rounded-lg" src="/Facing/facing.jpg"/>
         </div>
       </div>
     </>

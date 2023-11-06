@@ -4,38 +4,39 @@ import { FaHome } from 'react-icons/fa'
 import { AiFillQuestionCircle } from 'react-icons/ai'
 import GutkaCategory from './gutkaCategory/gutkaCategory';
 import OtherCategory from './otherCategory/otherCategory';
+import LazyImage from '@components/base/lazyImage';
 
 export default function ChildComp2() {
   const contentarray = [
-    [['Building/Awal.png', 'Building/Awal1.png'], "Awal Bricks", {
+    [['/Building/Awal.png', '/Building/Awal1.png'], "Awal Bricks", {
       "Product Type": "A Class",
       "Weight": "3.25kg",
       "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
       "Water Absorption Rate": "13.79%",
       "Ultimate Stree": "2036"
     }],
-    [['Building/Special.png', 'Building/Special1.png'], "Special Brick", {
+    [['/Building/Special.png', '/Building/Special1.png'], "Special Brick", {
       "Product Type": "A+ Class",
       "Weight": "3.39 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3",
       "Water Absorption Rate": "12.74 %",
       "Ultimate Stree (PSI)": "2288",
     }],
-    [['Building/Doum.png', 'Building/Doum1.png'], "Doum Brick", {
+    [['/Building/Doum.png', '/Building/Doum1.png'], "Doum Brick", {
       "Product Type": "A Class",
       "Weight": "3.23 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
       "Water Absorption Rate": "15.63 %",
       "Ultimate Stree (PSI)": "1493",
     }],
-    [['Building/PSK.png', 'Building/PSK1.png'], "Premium Brick", {
+    [['/Building/PSK.png', '/Building/PSK1.png'], "Premium Brick", {
       "Product Type": "A++ Class",
       "Weight": "3.37 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
       "Water Absorption Rate": "12.39 %",
       "Ultimate Stree (PSI)": "3182",
     }],
-    [['Building/Awal.png', 'Building/Awal1.png'], "Khinger Brick", {
+    [['/Building/Awal.png', '/Building/Awal1.png'], "Khinger Brick", {
       "Product Type": "Class",
       "Weight": "Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
@@ -80,7 +81,7 @@ export default function ChildComp2() {
         <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Others</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {contentarray.map((data, i) => {
-            return i < (contentarray.length-3) && <OtherCategory key={i} data={data}></OtherCategory>
+            return i < (contentarray.length - 3) && <OtherCategory key={i} data={data}></OtherCategory>
           })}
         </section>
       </section>
@@ -96,7 +97,8 @@ export default function ChildComp2() {
           </div>
         </div>
         <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
-          <img className="h-full w-full object-cover rounded-lg" src="/Building/building.png" alt="Brick Man" />
+          <LazyImage
+            className="h-full w-full object-cover rounded-lg" src="/Building/building.png" />
         </div>
       </div>
     </>
@@ -109,35 +111,35 @@ export default function ChildComp2() {
 // import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
 // export default function ChildComp2() {
 //   const contentarray = [
-//     [['Building/1.jpg', 'Building/2.jpg'], "Awal Bricks", {
+//     [['/Building/1.jpg', '/Building/2.jpg'], "Awal Bricks", {
 //       "Product Type": "A Class",
 //       "Weight": "3.25kg",
 //       "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
 //       "Water Absorption Rate": "13.79%",
 //       "Ultimate Stree": "2036"
 //     }],
-//     [['Building/1.jpg', 'Building/2.jpg'], "Doum Brick", {
+//     [['/Building/1.jpg', '/Building/2.jpg'], "Doum Brick", {
 //       "Product Type": "A Class",
 //       "Weight": "3.23 Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
 //       "Water Absorption Rate": "15.63 %",
 //       "Ultimate Stree (PSI)": "1493",
 //     }],
-//     [['Building/1.jpg', 'Building/2.jpg'], "Khinger Brick", {
+//     [['/Building/1.jpg', '/Building/2.jpg'], "Khinger Brick", {
 //       "Product Type": "Class",
 //       "Weight": "Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
 //       "Water Absorption Rate": "15.63 %",
 //       "Ultimate Stree (PSI)": "1493",
 //     }],
-//     [['Building/1.jpg', 'Building/2.jpg'], "Special Brick", {
+//     [['/Building/1.jpg', '/Building/2.jpg'], "Special Brick", {
 //       "Product Type": "A+ Class",
 //       "Weight": "3.39 Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3",
 //       "Water Absorption Rate": "12.74 %",
 //       "Ultimate Stree (PSI)": "2288",
 //     }],
-//     [['Building/1.jpg', 'Building/2.jpg'], "Premium Brick", {
+//     [['/Building/1.jpg', '/Building/2.jpg'], "Premium Brick", {
 //       "Product Type": "A++ Class",
 //       "Weight": "3.37 Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
@@ -261,7 +263,7 @@ export default function ChildComp2() {
       </div>
     </div>
     <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 py-16 px-1">
-      <img className="h-full w-full object-cover border-4 border-white rounded-2xl shadow-md shadow-black" src="/Building/building.jpg" alt="Brick Man" />
+      <img className="h-full w-full object-cover border-4 border-white rounded-2xl shadow-md shadow-black" src="//Building/building.jpg" alt="Brick Man" />
     </div>
   </div>
     <section className="flex flex-row gap-5 bg-bg relative">

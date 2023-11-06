@@ -1,3 +1,4 @@
+import LazyImage from '@components/base/lazyImage';
 import Image from 'next/image';
 import React from 'react';
 
@@ -6,7 +7,7 @@ const Card = (props) => {
     <section className={`${props.class}`}>
       <section className='flex flex-col items-center gap-3'>
         <section className='overflow-y-hidden relative group/hover rounded-md border-2 hover:scale-x-110 transition-all duration-200'>
-          <img loading="lazy" height='0' width='0' className='h-[300px] w-full object-fill' src={props.data[1]} alt="" />
+          <LazyImage className='h-[300px] w-full object-fill' src={props.data[1]}/>
           <div className='bg-black/30 border-t-2 backdrop-blur-sm flex flex-col justify-center gap-3 p-3 items-center absolute z-10 bottom-0 w-full text-white h-[20%] group-hover/hover:h-[75%]  transition-all duration-300'>
             <h1 className='font-bold text-lg'><span className='pr-2 text-xl text-darkColor'>{props.data[2]}</span>{props.data[0]}</h1>
             <button className="hidden group-hover/hover:block btn" onClick={() => document.getElementById('my_modal_3').showModal()}>View Images</button>
@@ -16,7 +17,7 @@ const Card = (props) => {
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-black">✕</button>
                 </form>
                 <div className="modal-box">
-                  <img loading="lazy" height='0' width='0' className='h-full w-full object-fill' src={props.data[1]} alt="" />
+                  <LazyImage className='h-full w-full object-fill' src={props.data[1]}/>
                 </div>
               </div>
             </dialog>

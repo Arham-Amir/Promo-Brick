@@ -30,9 +30,9 @@ const Footer = () => {
         </section>
       </section>
       <section className='w-screen bg-black'>
-        <section className="p-3 px-5 mx-auto xs:text-xs md:text-sm text-white flex justify-between items-center">
+        <section className="py-3 px-5 mx-auto xs:text-xs md:text-sm text-white flex justify-between items-center flex-col sm:flex-row gap-y-2">
           <p>&copy; 2018 - Promo Developers | All Rights Reserved</p>
-          <p>Built by FurmTech</p>
+          <p >Built by FurmTech</p>
         </section>
       </section>
     </section>
