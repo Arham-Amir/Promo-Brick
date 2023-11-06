@@ -40,7 +40,7 @@ const CategoryDetails = (props = {}) => {
             <AiOutlinePlus />
           </button>
         </section>
-        <button className='rounded-lg bg-themeColor text-black  px-3 py-2 w-fit text-base md:text-lg '>ADD TO CART</button>
+        <button className='rounded-lg bg-themeColor text-black  px-3 py-2 w-fit text-base'>ADD TO CART</button>
       </section>
     </section>
   );

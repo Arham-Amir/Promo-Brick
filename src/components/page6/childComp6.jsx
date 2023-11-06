@@ -1,7 +1,7 @@
 'use client'
 import Category from './category/category';
 import { FaHome } from 'react-icons/fa'
-import { MdFireTruck } from 'react-icons/md'
+import { AiFillQuestionCircle } from 'react-icons/ai'
 
 export default function ChildComp6() {
   const simplePots = [
@@ -139,23 +139,23 @@ export default function ChildComp6() {
             <p className='text-lg'>Home/Pots</p>
           </section>
           <section className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
-            <MdFireTruck size={30} />
-            <p className='text-lg'>/Check Cart</p>
+            <AiFillQuestionCircle size={30} />
+            <p className='text-lg'>/Inquire Now</p>
           </section>
         </section>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-3xl md:text-5xl mx-auto font-heading font-bold'>Simple Pots</h1>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-3xl md:text-5xl mx-auto font-heading font-bold heading-bg'>Simple Pots</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {simplePots.map((data, i) => {
             return <Category key={i} data={data}></Category>
           })}
         </section>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold'>Special Pots</h1>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Special Pots</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {specialPots.map((data, i) => {
             return <Category key={i} data={data}></Category>
           })}
         </section>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold'>URN Pots</h1>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>URN Pots</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {urnPots.map((data, i) => {
             return <Category key={i} data={data}></Category>

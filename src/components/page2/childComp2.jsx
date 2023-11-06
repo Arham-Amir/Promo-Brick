@@ -1,7 +1,7 @@
 'use client'
 import Category from './category/category';
 import { FaHome } from 'react-icons/fa'
-import { MdFireTruck } from 'react-icons/md'
+import { AiFillQuestionCircle } from 'react-icons/ai'
 import GutkaCategory from './gutkaCategory/gutkaCategory';
 import OtherCategory from './otherCategory/otherCategory';
 
@@ -55,11 +55,11 @@ export default function ChildComp2() {
             <p className='text-lg'>Home/Building Bricks</p>
           </section>
           <section className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
-            <MdFireTruck size={30} />
-            <p className='text-lg'>/Check Cart</p>
+            <AiFillQuestionCircle size={30} />
+            <p className='text-lg'>/Inquire Now</p>
           </section>
         </section>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold'>Building Brick</h1>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Building Brick</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {contentarray.map((data, i) => {
             return <Category key={i} data={data}></Category>
@@ -68,7 +68,7 @@ export default function ChildComp2() {
       </section>
 
       <section className='h-auto max-w-screen'>
-        <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold'>Gutka</h1>
+        <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Gutka</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {contentarray.map((data, i) => {
             return i != contentarray.length - 1 && <GutkaCategory key={i} data={data}></GutkaCategory>
@@ -77,7 +77,7 @@ export default function ChildComp2() {
       </section>
 
       <section className='h-auto max-w-screen'>
-        <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold'>Others</h1>
+        <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Others</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {contentarray.map((data, i) => {
             return i < (contentarray.length-3) && <OtherCategory key={i} data={data}></OtherCategory>
@@ -85,17 +85,17 @@ export default function ChildComp2() {
         </section>
       </section>
 
-      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-11/12 mx-auto px-5 py-2 my-8">
+      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2
      px-7 flex flex-col justify-center items-end gap-6">
-          <div className="relative z-20 flex flex-col gap-5">
+          <div className="relative z-20 flex flex-col gap-5 w-full">
             <h1 className="text-5xl font-bold font-heading">Building Brick</h1>
-            <p className="text-base font-medium w-11/12 font-text">
+            <p className="text-base font-medium w-full md:w-11/12 font-text">
               The term "brick" is used to denote a building unit made of shaped clay, but in modern times it refers to any stone- or clay-based building unit that is joined with cementation working when used in construction.They are used for building walls, foundations, and columns, among others.
             </p>
           </div>
         </div>
-        <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
+        <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
           <img className="h-full w-full object-cover rounded-lg" src="/Building/building.png" alt="Brick Man" />
         </div>
       </div>
