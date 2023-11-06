@@ -140,10 +140,10 @@ export default function ChildComp6() {
             <FaHome size={30} />
             <p className='text-lg'>Home/Pots</p>
           </section>
-          <section className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
+          <a href={'https://wa.me/+923004439445'} target='_blank' className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
             <AiFillQuestionCircle size={30} />
             <p className='text-lg'>/Inquire Now</p>
-          </section>
+          </a>
         </section>
         <h1 className='w-4/5 border text-center mt-5 p-5 text-3xl md:text-5xl mx-auto font-heading font-bold heading-bg'>Simple Pots</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>

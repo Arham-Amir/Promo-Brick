@@ -23,27 +23,18 @@ const ChildComp = () => {
             <FaHome size={30} />
             <p className='text-lg'>Home/Clay Tiles</p>
           </section>
-          <section className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
+          <a href={'https://wa.me/+923004439445'} target='_blank' className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
             <AiFillQuestionCircle size={30} />
             <p className='text-lg'>/Inquire Now</p>
-          </section>
+          </a>
         </section>
         <section className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 gap-10 place-items-center place-content-center">
           {arr.map((el, i) => {
             return <Card key={i} data={el} class="" />
           })}
         </section>
-        <dialog id="my_modal_4" className="modal min-w-[80vh] min-h-[80vh]">
-          <div className="modal-box flex flex-col gap-5 items-center w-full h-full">
-            <form method="dialog">
-              <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-black">✕</button>
-            </form>
-            <div className="modal-box w-full h-full">
-              <iframe className='w-full h-full' src="https://docs.google.com/forms/d/e/1FAIpQLSfjMUTbqz6CTpcUKyLU6jUBzVDkJJzHmv3K7hZLxA53NI8VgQ/viewform?embedded=true" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
-            </div>
-          </div>
-        </dialog>
       </section>
+
       <div className="flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
           <div className="relative z-20 flex flex-col gap-5 w-full">

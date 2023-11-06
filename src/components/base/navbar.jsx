@@ -89,14 +89,15 @@ const Navbar = () => {
                 <ul className="p-2 z-30">
                   <li><Link href="/page2" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Buildings Bricks</Link></li>
                   <li><Link href="/page3" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Facing Bricks</Link></li>
-                  <li><Link href="/page5" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Clay Tiles</Link></li>
                   <li><Link href="/page4" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Brick Slips</Link></li>
+                  <li><Link href="/page5" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Clay Tiles</Link></li>
                   <li><Link href="/page6" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Pots</Link></li>
                 </ul>
               </li>
               <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>Gallery</a></li>
               <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>About</a></li>
               <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Lin to="contactus" spy={true} smooth={true} duration={500} >Contact Us</Lin></li>
+              <li><a href="https://www.promodevelopers.com" target="blank" className="py-3 text-white flex items-center justify-center h-fit bg-themeColor rounded-xl">Construct with us</a></li>
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">Promo Brick</a>

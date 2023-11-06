@@ -22,8 +22,6 @@ const Card = (props) => {
             </dialog>
           </div>
         </section>
-        {/* <button className="btn bg-darkColor text-white w-fit hover:rotate-2"
-          onClick={() => document.getElementById('my_modal_4').showModal()}>Add to Cart</button> */}
       </section>
     </section>
   );
