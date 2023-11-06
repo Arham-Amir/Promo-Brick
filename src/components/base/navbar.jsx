@@ -1,57 +1,62 @@
 'use client'
 import Nav_Logo from "@components/base/nav_logo";
 import Nav_Links from "@components/base/nav_links";
+import { Link as Lin } from "react-scroll";
 import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 
 const Navbar = () => {
-  const [ham, showHam] = useState(false);
-  const navRef = useRef(null);
-  const navRef2 = useRef(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  // const [ham, showHam] = useState(false);
+  // const navRef = useRef(null);
+  // const navRef2 = useRef(null);
   const path = usePathname();
-
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navRef2.current.classList.remove('block')
-          navRef2.current.classList.add('hidden')
-        } else {
-          navRef2.current.classList.remove('hidden')
-          navRef2.current.classList.add('block')
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0
-    });
+    setDropdownOpen(false);
+  }, [path])
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(entries => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         navRef2.current.classList.remove('block')
+  //         navRef2.current.classList.add('hidden')
+  //       } else {
+  //         navRef2.current.classList.remove('hidden')
+  //         navRef2.current.classList.add('block')
+  //       }
+  //     });
+  //   }, {
+  //     root: null,
+  //     rootMargin: '0px',
+  //     threshold: 0
+  //   });
 
-    if (navRef.current) {
-      observer.observe(navRef.current);
-    }
+  //   if (navRef.current) {
+  //     observer.observe(navRef.current);
+  //   }
 
-    return () => {
-      if (navRef.current) {
-        observer.unobserve(navRef.current);
-      }
-    };
-  }, [])
-  useEffect(() => {
-    if (ham) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
-  }, [ham]);
+  //   return () => {
+  //     if (navRef.current) {
+  //       observer.unobserve(navRef.current);
+  //     }
+  //   };
+  // }, [])
+  // useEffect(() => {
+  //   if (ham) {
+  //     document.body.classList.add('overflow-hidden');
+  //   } else {
+  //     document.body.classList.remove('overflow-hidden');
+  //   }
+  //   return () => {
+  //     document.body.classList.remove('overflow-hidden');
+  //   };
+  // }, [ham]);
 
-  return (<>
-    {/* <section ref={navRef} className={`${ham ? 'h-[14vh]' : 'h-[14vh]'} ${path=="/"? 'bg-bg' : 'bg-bg'} flex flex-col z-50 w-screen`}>
+  return (
+    <>
+      {/* <section ref={navRef} className={`${ham ? 'h-[14vh]' : 'h-[14vh]'} ${path=="/"? 'bg-bg' : 'bg-bg'} flex flex-col z-50 w-screen`}>
       <nav className="h-full w-full 2xl:h-28 text-black py-3 lg:pl-8 lg:pr-12 xl:pl-10 xl:pr-24 sm:px-10 xs:px-4 lg:text-md 2xl:text-xl 3xl:text-2xl flex items-center justify-between font-sans relative">
         <Nav_Logo></Nav_Logo>
         <Nav_Links path={path} childClass1 = "gap-3" childClass2="px-3 py-1" className='xs:hidden md:flex md:justify-between w-full md:gap-7 lg:gap-12 font-semibold' />
@@ -68,57 +73,59 @@ const Navbar = () => {
     </section>
     <section ref={navRef2} className="bg-black w-screen h-[7vh] fixed top-0 z-40 xs:text-[7px] md:text-sm">
       <Nav_Links path={path} childClass2="p-3" small='true' className="text-white flex items-center justify-center "></Nav_Links>
-    </section> */}
-    <div className="navbar bg-bg h-[12vh]">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-          </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-20">
-            <li><Link href="/">Home</Link></li>
-            <li>
-              <a>Products</a>
-              <ul className="p-2 z-30">
-                <li ><Link href="/page2" className="cursor-pointer min-w-fit">Buildings Bricks</Link></li>
-                <li ><Link href="/page3" className="cursor-pointer min-w-fit">Facing Bricks</Link></li>
-                <li ><Link href="/page4" className="cursor-pointer min-w-fit">Clay Tiles</Link></li>
-                <li ><Link href="/page5" className="cursor-pointer min-w-fit">Slips</Link></li>
-                <li ><Link href="/page2" className="cursor-pointer min-w-fit">Pots</Link></li>
-              </ul>
+    </section> */
+      }
+      <div className="navbar bg-bg h-[12vh]">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label tabIndex={0} className="btn btn-ghost md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-20">
+              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor">
+                <Link href="/">Home</Link></li>
+              <li >
+                <a className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor">Products</a>
+                <ul className="p-2 z-30">
+                  <li><Link href="/page2" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Buildings Bricks</Link></li>
+                  <li><Link href="/page3" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Facing Bricks</Link></li>
+                  <li><Link href="/page5" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Clay Tiles</Link></li>
+                  <li><Link href="/page4" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Brick Slips</Link></li>
+                  <li><Link href="/page6" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Pots</Link></li>
+                </ul>
+              </li>
+              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>Gallery</a></li>
+              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>About</a></li>
+              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Lin to="contactus" spy={true} smooth={true} duration={500} >Contact Us</Lin></li>
+            </ul>
+          </div>
+          <a className="btn btn-ghost normal-case text-xl">Promo Brick</a>
+        </div>
+        <div className="navbar-center hidden md:flex">
+          <ul className="menu menu-horizontal px-1">
+            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/">Home</Link></li>
+            <li tabIndex={0} className="">
+              <details {...(dropdownOpen==false ? { open: true } : {})}>
+                <summary onClick={() => setDropdownOpen(!dropdownOpen)} className="cursor-pointer  hover:scale-110 transition duration-100 hover:text-themeColor">Products</summary>
+                {dropdownOpen && (<ul className="p-2 z-30 min-w-max">
+                  <li ><Link href="/page2" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Buildings Bricks</Link></li>
+                  <li ><Link href="/page3" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Facing Bricks</Link></li>
+                  <li ><Link href="/page5" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Clay Tiles</Link></li>
+                  <li ><Link href="/page4" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Brick Slips</Link></li>
+                  <li ><Link href="/page6" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Pots</Link></li>
+                </ul>)}
+              </details>
             </li>
-            <li><a>Gallery</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact Us</a></li>
+            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>Gallery</a></li>
+            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>About</a></li>
+            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Lin to="contactus" spy={true} smooth={true} duration={500} >Contact Us</Lin></li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Promo Brick</a>
+        <div className="hidden sm:flex navbar-end">
+          <a href="https://www.promodevelopers.com" target="blank" className="btn text-white bg-themeColor rounded-xl">Construct with us</a>
+        </div>
       </div>
-      <div className="navbar-center hidden md:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li><Link href="/">Home</Link></li>
-          <li tabIndex={0} className="">
-            <details>
-              <summary>Products</summary>
-              <ul className="p-2 z-20 min-w-max">
-                <li ><Link href="/page2" className="cursor-pointer min-w-fit">Buildings Bricks</Link></li>
-                <li ><Link href="/page3" className="cursor-pointer min-w-fit">Facing Bricks</Link></li>
-                <li ><Link href="/page4" className="cursor-pointer min-w-fit">Clay Tiles</Link></li>
-                <li ><Link href="/page5" className="cursor-pointer min-w-fit">Slips</Link></li>
-                <li ><Link href="/page2" className="cursor-pointer min-w-fit">Pots</Link></li>
-              </ul>
-            </details>
-          </li>
-          <li><a>Gallery</a></li>
-          <li><a>About</a></li>
-          <li><a>Contact Us</a></li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <a className="btn text-white bg-themeColor rounded-xl">Construct with us</a>
-      </div>
-    </div>
-  </>
+    </>
   );
 }
 

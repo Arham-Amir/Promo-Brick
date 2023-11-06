@@ -4,6 +4,12 @@
 
 
 @layer components{
+  .flex-all-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   /* Hide ScrollBar */
   .custom-scroll::-webkit-scrollbar {
     display: none; /* Hide scrollbar for Chrome, Safari, and Opera */

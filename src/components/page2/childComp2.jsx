@@ -1,135 +1,143 @@
 'use client'
-import { useState } from 'react'
-import Types from './types/types';
-import SelectedType from './selectedType/selectedType';
+import Category from './category/category';
+import { FaHome } from 'react-icons/fa'
+import { MdFireTruck } from 'react-icons/md'
+import GutkaCategory from './gutkaCategory/gutkaCategory';
+import OtherCategory from './otherCategory/otherCategory';
 
 export default function ChildComp2() {
-  const [type, settype] = useState(0);
   const contentarray = [
-    [['page2/1.jpg', 'page2/2.jpg'], "Premium Brick", {
-      "Material": "Clay",
-      "Shape": "Rectangular",
-      "Product Type": "A++ Class",
-      "Weight": "3.37 Kg",
-      "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
-      "Water Absorption Rate": "12.39 %",
-      "Ultimate Stree (PSI)": "3182",
-    }],
-    [['page2/1.jpg', 'page2/2.jpg'], "Special Brick", {
-      "Material": "Clay",
-      "Shape": "Rectangular",
-      "Product Type": "A+ Class",
-      "Weight": "3.39 Kg",
-      "Dimension (L*W*D)": "9.0*4.5*3",
-      "Water Absorption Rate": "12.74 %",
-      "Ultimate Stree (PSI)": "2288",
-    }],
-    [['page2/1.jpg', 'page2/2.jpg'], "Awal Bricks", {
-      "Material": "Clay",
-      "Shape": "Rectangular",
+    [['Building/Awal.png', 'Building/Awal1.png'], "Awal Bricks", {
       "Product Type": "A Class",
       "Weight": "3.25kg",
       "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
       "Water Absorption Rate": "13.79%",
       "Ultimate Stree": "2036"
     }],
-    [['page2/1.jpg', 'page2/2.jpg'], "Doum Brick", {
-      "Material": "Clay",
-      "Shape": "Rectangular",
+    [['Building/Special.png', 'Building/Special1.png'], "Special Brick", {
+      "Product Type": "A+ Class",
+      "Weight": "3.39 Kg",
+      "Dimension (L*W*D)": "9.0*4.5*3",
+      "Water Absorption Rate": "12.74 %",
+      "Ultimate Stree (PSI)": "2288",
+    }],
+    [['Building/Doum.png', 'Building/Doum1.png'], "Doum Brick", {
       "Product Type": "A Class",
       "Weight": "3.23 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
       "Water Absorption Rate": "15.63 %",
       "Ultimate Stree (PSI)": "1493",
     }],
-    [['page2/1.jpg', 'page2/2.jpg'], "Khinger Brick", {
-      "Material": "Clay",
-      "Shape": "Rectangular",
+    [['Building/PSK.png', 'Building/PSK1.png'], "Premium Brick", {
+      "Product Type": "A++ Class",
+      "Weight": "3.37 Kg",
+      "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
+      "Water Absorption Rate": "12.39 %",
+      "Ultimate Stree (PSI)": "3182",
+    }],
+    [['Building/Awal.png', 'Building/Awal1.png'], "Khinger Brick", {
       "Product Type": "Class",
       "Weight": "Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
       "Water Absorption Rate": "15.63 %",
       "Ultimate Stree (PSI)": "1493",
     }],
+
+
   ]
 
   return (
     <>
-      <div className="flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-11/12 mx-auto shadow-md shadow-black px-5 py-2 my-8">
-        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 bg-bg px-7 flex flex-col justify-center items-end gap-6">
-          {/* Add a pseudo-element with a transparent background */}
-          <div className="absolute bg-cover md:hidden inset-0 bg-black opacity-50 z-10" />
-          <div className="relative z-20 flex flex-col gap-3">
-            <h1 className="text-4xl font-bold font-heading">All Range of Quality Of Bricks</h1>
-            <p className="text-sm font-medium w-11/12 font-text">The term "brick" is used to denote a building unit made of shaped clay, but in modern times it refers to any stone- or clay-based building unit that is joined with cementation working when used in construction.They are used for building walls, foundations, and columns, among others.
+      <section className='h-auto max-w-screen'>
+        <section className='flex flex-row items-center justify-end ms:justify-between w-4/5 mx-auto pt-5'>
+          <section className='hidden ms:flex flex-row gap-3 items-center'>
+            <FaHome size={30} />
+            <p className='text-lg'>Home/Building Bricks</p>
+          </section>
+          <section className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
+            <MdFireTruck size={30} />
+            <p className='text-lg'>/Check Cart</p>
+          </section>
+        </section>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold'>Building Brick</h1>
+        <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
+          {contentarray.map((data, i) => {
+            return <Category key={i} data={data}></Category>
+          })}
+        </section>
+      </section>
+
+      <section className='h-auto max-w-screen'>
+        <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold'>Gutka</h1>
+        <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
+          {contentarray.map((data, i) => {
+            return i != contentarray.length - 1 && <GutkaCategory key={i} data={data}></GutkaCategory>
+          })}
+        </section>
+      </section>
+
+      <section className='h-auto max-w-screen'>
+        <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold'>Others</h1>
+        <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
+          {contentarray.map((data, i) => {
+            return i < (contentarray.length-3) && <OtherCategory key={i} data={data}></OtherCategory>
+          })}
+        </section>
+      </section>
+
+      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-11/12 mx-auto px-5 py-2 my-8">
+        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2
+     px-7 flex flex-col justify-center items-end gap-6">
+          <div className="relative z-20 flex flex-col gap-5">
+            <h1 className="text-5xl font-bold font-heading">Building Brick</h1>
+            <p className="text-base font-medium w-11/12 font-text">
+              The term "brick" is used to denote a building unit made of shaped clay, but in modern times it refers to any stone- or clay-based building unit that is joined with cementation working when used in construction.They are used for building walls, foundations, and columns, among others.
             </p>
-            <p className="text-sm font-medium w-11/12 font-text">
-              We are the manufacturer of Building Bricks and produce the premium quality of Building Bricks in the market with the 30+ years of experience with a highly experienced team in our factory. Which consist of 100% clay, highly durability, eco friendly and great solution for those who love natural look.
-            </p>
-            <p className="text-sm font-medium w-11/12 font-text">
-              We provide Building bricks in different designs, options varying from traditional to modern style, sizes,colors, and textures. These Building bricks are customizable based on users’ required specifications.
-            </p>
-            {/* <button className="border-2 font-bold border-black px-10 py-3 w-fit text-lg mt-3">See Below</button> */}
           </div>
         </div>
-        <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 py-16 px-1">
-          <img className="h-full w-full object-cover border-4 border-white rounded-2xl shadow-md shadow-black" src="/images/page2.jpg" alt="Brick Man" />
+        <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
+          <img className="h-full w-full object-cover rounded-lg" src="/Building/building.png" alt="Brick Man" />
         </div>
       </div>
-      <section className="flex flex-row gap-5 bg-bg relative">
-        <Types data={contentarray} settype={(t) => settype(t)} type={type} />
-        <SelectedType data={contentarray[type]} />
-      </section>
     </>
-
   )
 }
 
 // 'use client'
-// import React, { useState } from 'react'
+// import React, {useState} from 'react'
 // import Slideshow from './slideshow/slideshow'
-// import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
+// import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
 // export default function ChildComp2() {
 //   const contentarray = [
-//     [['page2/1.jpg', 'page2/2.jpg'], "Awal Bricks", {
-//       "Material": "Clay",
-//       "Shape": "Rectangular",
+//     [['Building/1.jpg', 'Building/2.jpg'], "Awal Bricks", {
 //       "Product Type": "A Class",
 //       "Weight": "3.25kg",
 //       "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
 //       "Water Absorption Rate": "13.79%",
 //       "Ultimate Stree": "2036"
 //     }],
-//     [['page2/1.jpg', 'page2/2.jpg'], "Doum Brick", {
-//       "Material": "Clay",
-//       "Shape": "Rectangular",
+//     [['Building/1.jpg', 'Building/2.jpg'], "Doum Brick", {
 //       "Product Type": "A Class",
 //       "Weight": "3.23 Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
 //       "Water Absorption Rate": "15.63 %",
 //       "Ultimate Stree (PSI)": "1493",
 //     }],
-//     [['page2/1.jpg', 'page2/2.jpg'], "Khinger Brick", {
-//       "Material": "Clay",
-//       "Shape": "Rectangular",
+//     [['Building/1.jpg', 'Building/2.jpg'], "Khinger Brick", {
 //       "Product Type": "Class",
 //       "Weight": "Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
 //       "Water Absorption Rate": "15.63 %",
 //       "Ultimate Stree (PSI)": "1493",
 //     }],
-//     [['page2/1.jpg', 'page2/2.jpg'], "Special Brick", {
-//       "Material": "Clay",
-//       "Shape": "Rectangular",
+//     [['Building/1.jpg', 'Building/2.jpg'], "Special Brick", {
 //       "Product Type": "A+ Class",
 //       "Weight": "3.39 Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3",
 //       "Water Absorption Rate": "12.74 %",
 //       "Ultimate Stree (PSI)": "2288",
 //     }],
-//     [['page2/1.jpg', 'page2/2.jpg'], "Premium Brick", {
-//       "Material": "Clay",
-//       "Shape": "Rectangular",
+//     [['Building/1.jpg', 'Building/2.jpg'], "Premium Brick", {
 //       "Product Type": "A++ Class",
 //       "Weight": "3.37 Kg",
 //       "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
@@ -232,3 +240,33 @@ export default function ChildComp2() {
 //     </div>
 //   )
 // }
+
+
+
+
+{
+  /*
+   <div className="bg-[#C3C6CA] flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-11/12 mx-auto shadow-md shadow-black px-5 py-2 my-8">
+    <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2
+     px-7 flex flex-col justify-center items-end gap-6">
+      <div className="absolute bg-cover md:hidden inset-0 bg-black opacity-50 z-10" />
+      <div className="relative z-20 flex flex-col gap-5">
+        </p>
+        <p className="text-base font-medium w-11/12 font-text">
+          We are the manufacturer of Building Bricks and produce the premium quality of Building Bricks in the market with the 30+ years of experience with a highly experienced team in our factory. Which consist of 100% clay, highly durability, eco friendly and great solution for those who love natural look.
+        </p>
+        <p className="text-base font-medium w-11/12 font-text">
+          We provide Building bricks in different designs, options varying from traditional to modern style, sizes,colors, and textures. These Building bricks are customizable based on users’ required specifications.
+        </p>
+      </div>
+    </div>
+    <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 py-16 px-1">
+      <img className="h-full w-full object-cover border-4 border-white rounded-2xl shadow-md shadow-black" src="/Building/building.jpg" alt="Brick Man" />
+    </div>
+  </div>
+    <section className="flex flex-row gap-5 bg-bg relative">
+    <Types data={contentarray} settype={(t) => settype(t)} type={type} />
+    <SelectedType data={contentarray[type]} />
+  </section>
+  */
+}

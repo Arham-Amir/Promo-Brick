@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { FcNext, FcPrevious } from 'react-icons/fc';
 
@@ -8,11 +9,8 @@ const Carousel = () => {
   const refImage = useRef([]);
   const images = [
     '/images/slider1.png',
-    '/images/slider2.png',
     '/images/slider3.png',
-    '/images/slider4.png',
     '/images/slider5.png',
-    '/images/slider6.png',
     '/images/slider7.png',
   ];
 
@@ -59,11 +57,6 @@ const Carousel = () => {
     <section className="xs:h-[70vh] md:h-[100vh] mx-0 w-screen overflow-x-hidden z-10 relative">
       <section ref={ref} className="h-full flex flex-row flex-nowrap w-full overflow-x-scroll custom-scroll">
         <FcPrevious onClick={handleLeftClick} className="cursor-pointer absolute top-1/2 -translate-y-1/2 left-2 text-4xl z-30" />
-        {/* <section
-          className={`grayscale-[25] border-y-2 border-r-2 border-slate-300 min-w-[10%] h-full`}
-        >
-          <img src={images[images.length - 1]} alt={`image -1`} className="object-cover h-full w-full" />
-        </section> */}
         {images.map((el, i) => (
           <section
             key={i}
@@ -73,11 +66,6 @@ const Carousel = () => {
             <img src={el} alt={`image ${i + 1}`} className="object-cover h-full w-full" />
           </section>
         ))}
-        {/* <section
-          className={`grayscale-[25] border-y-2 border-r-2 border-slate-300 min-w-[10%] h-full`}
-        >
-          <img src={images[0]} alt={`image -1`} className="object-cover h-full w-full" />
-        </section>*/}
         <FcNext onClick={handleRightClick} className="cursor-pointer absolute top-1/2 -translate-y-1/2 right-2 text-4xl z-30" />
       </section>
     </section>

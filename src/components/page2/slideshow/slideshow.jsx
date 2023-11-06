@@ -13,11 +13,11 @@ const Slideshow = ({ images }) => {
   };
 
   return (
-    <div className="relative w-full h-full border-4 border-bg rounded-3xl shadow-lg shadow-black"> {/* Adjusted to half screen width */}
+    <div className="relative w-full h-full"> {/* Adjusted to half screen width */}
       {/* Full-width images with number and caption text */}
       <div className="w-full h-full">
         <img
-          className="w-full h-full object-cover rounded-3xl"
+          className="w-full h-full object-cover"
           src={images[currentSlide]}
           alt={`Slide ${currentSlide + 1}`}
         />
@@ -25,13 +25,13 @@ const Slideshow = ({ images }) => {
 
       {/* Next and previous buttons */}
       <button
-        className="prev absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 font-bold text-xl cursor-pointer text-white transition duration-300 hover:bg-gray-300 hover:text-black"
+        className="prev absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 font-bold text-xl cursor-pointer text-black transition duration-300 hover:bg-gray-300 hover:text-black"
         onClick={prevSlide}
       >
         <IoIosArrowBack />
       </button>
       <button
-        className="next absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 text-white font-bold text-xl cursor-pointer transition duration-300 hover:bg-gray-300 hover:text-black"
+        className="next absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 text-black font-bold text-xl cursor-pointer transition duration-300 hover:bg-gray-300 hover:text-black"
         onClick={nextSlide}
       >
         <IoIosArrowForward />

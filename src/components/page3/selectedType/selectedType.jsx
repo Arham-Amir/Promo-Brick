@@ -31,10 +31,10 @@ const SelectedType = (props = {}) => {
         </section>
       </section>
       <div className="my-8 bg-[url('/images/bgtypes.png')]">
-        <div className="text-white bg-cover p-14 text-center flex flex-col xs:gap-4 md:gap-7">
+      {/*  */}
+        {/* <div className="text-white bg-cover p-14 text-center flex flex-col xs:gap-4 md:gap-7">
           <h1 className="font-heading mx-auto my-0 sm:text-center font-bold text-4xl">Categories Of Brick</h1>
-
-        </div>
+        </div> */}
       </div>
       <section className="my-5">
         {props.data['data'].map((el, i) => {
@@ -53,8 +53,8 @@ function FurtherType(props ={}) {
       <section className="w-full flex flex-col gap-3 text-white">
         <h1 className="text-4xl font-heading font-bold text-darkColor">{props.data['Name']} :</h1>
         <section className="flex flex-row gap-5 p-5 m-5">
-         <section className="flex-1 bg-darkColor"> <img className=" shadow-black border bg-bg border-bg h-[300px] object-fill w-full shadow-md" src={props.data['Img'][0]} alt="brickImage" /></section>
-         <section className="flex-1 bg-darkColor"> <img className=" shadow-black border bg-bg border-bg h-[300px] object-fill w-full shadow-md" src={props.data['Img'][1]} alt="brickImage" /></section>
+         <section className="flex-1 bg-darkColor"> <img className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][0]} alt="brickImage" /></section>
+         <section className="flex-1 bg-darkColor"> <img className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][1]} alt="brickImage" /></section>
         </section>
       </section>
     </section>

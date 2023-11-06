@@ -34,7 +34,8 @@ module.exports = {
 
         'textColor': "#052F5F",
         'bgDark': "rgb(55, 65, 81)",
-        'bg' : "#f2f2f2"
+        // 'bg' : "#f2f2f2"
+        'bg' : "white",
       },
     },
   },

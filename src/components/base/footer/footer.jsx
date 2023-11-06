@@ -1,51 +1,39 @@
-import React from 'react'
-import { BsTelephone } from 'react-icons/bs'
-import { AiOutlineMail } from 'react-icons/ai'
-export default function Footer() {
+import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs'
+const Footer = () => {
   return (
-    <div className="bg-gradient-to-br from-[#0c0c0c] to-[#393939] text-xs w-screen border-t-4 border-white">
-      <section className='flex justify-center items-center h-full'>
-        <div className="px-16 flex flex-wrap text-white justify-between items-start min-h-max w-full py-10 overflow-hidden text-sm">
-          <div className='md:w-1/4 xs:w-1/2 '>
-            <img className="mx-auto object-contain h-[200px]" src="Images/nav_logo.gif" alt="Logo" />
-          </div>
-          <div className="md:w-1/4 mt-9 md:mt-0 xs:w-1/2 flex flex-col items-start p-10" >
-            <h2 className="mb-4 text-2xl font-bold">Address</h2>
-            <p className="mt-2 w-3/5 leading-6">
-              60-J block, DHA EME sector, Multan road, Lahore, Pakistan</p>
-          </div>
-          <div className="md:w-1/4 mt-9 md:mt-0 xs:w-1/2 flex flex-col items-start p-10" >
-            <h2 className="mb-4 text-2xl font-bold">Follow</h2>
-            <ul>
-              <li className="mt-3 hover:text-themeColor hover:cursor-pointer">Facebook</li>
-              <li className="mt-3 hover:text-themeColor hover:cursor-pointer">LinkedIn</li>
-              <li className="mt-3 hover:text-themeColor hover:cursor-pointer">Instagram</li>
-            </ul>
-          </div>
-          <div className="w-full md:w-1/4 mt-9 md:mt-0 xs:w-1/2 flex flex-col items-start p-10" >
-            <h2 className="mb-4 text-2xl font-bold">Contact Us</h2>
-            <div className="mt-3">
-              <BsTelephone className="inline" />
-              <span className="ml-2 hover:text-themeColor hover:cursor-pointer">+923004439445</span>
-            </div>
-            <div className="mt-3">
-              <AiOutlineMail className="inline" />
-              <span className="ml-2 hover:text-themeColor hover:cursor-pointer">info@promobricks.com</span>
-            </div>
-          </div>
-        </div>
+    <section className="bg-gradient-to-br from-[#0c0c0c] to-[#393939] flex flex-col">
+
+      <section className="w-[85%] mx-auto flex flex-row xs:flex-wrap md:flex-nowrap justify-center md:gap-x-10 py-6">
+        <a href="https://www.promodevelopers.com/" target='_blank' className="h-full mx-auto xs:w-1/2 md:w-1/5 px-4 xs:order-2 md:order-1">
+          <img className="h-[130px] w-full object-contain hover:-translate-y-2 hover:border-t-4 transition-all duration-150" src="/logos/promodevelopers.gif" alt="promodevelopers" />
+        </a>
+        <a href="https://www.promobrick.com/" target='_blank' className="h-full mx-auto xs:w-1/2 md:w-1/5 px-4 xs:order-3 md:order-2">
+          <img className="h-[130px] w-full object-contain hover:-translate-y-2 hover:border-t-4 transition-all duration-150" src="/logos/promobrick.gif" alt="promobrick" />
+        </a>
+        <a href="https://www.promogroup.com.pk/" target='_blank' className="h-full mx-auto xs:w-full md:w-1/5 px-4 xs:order-1 md:order-3">
+          <img className="h-[160px] w-full object-contain hover:-translate-y-2 hover:border-t-4 transition-all duration-150" src="/logos/promogroup.gif" alt="promogroup" />
+        </a>
+        <a href="https://www.promogarlic.com/" target='_blank' className="h-full mx-auto xs:w-1/2 md:w-1/5 px-4 xs:order-4 md:order-4">
+          <img className="h-[130px] w-full object-contain hover:-translate-y-2 hover:border-t-4 transition-all duration-150" src="/logos/promogarlic.gif" alt="promogarlic" />
+        </a>
+        <a href="https://www.promoland.com.pk/" target='_blank' className="h-full mx-auto xs:w-1/2 md:w-1/5 px-4 xs:order-5 md:order-5">
+          <img className="h-[130px] w-full object-contain hover:-translate-y-2 hover:border-t-4 transition-all duration-150" src="/logos/promofarms.gif" alt="promoland" />
+        </a>
       </section>
-      <hr className="hidden lg:block w-11/12 mx-auto bg-slate-300" />
-      <section className='grid grid-cols-2 md:grid-cols-4 place-items-center items-center px-20 pb-3 lg:pb-0 gap-5 md:gap-10 '>
-        <a target='blank' className='ms:h-[200px] w-fit md:w-[200px]' href="https://www.promogroup.com.pk/"><img className='h-full object-contain hover:-translate-y-4 transition-all duration-200 cursor-pointer drop-shadow-[0_20px_20px_rgba(255,255,255,0.30)]' src="/logos/promogroup.gif" alt="Image" /></a>
-        <a target='blank' className='ms:h-[200px] w-fit md:w-[200px]' href="https://www.promodevelopers.com/"><img className='h-full object-contain hover:-translate-y-4 transition-all duration-200 cursor-pointer drop-shadow-[0_20px_20px_rgba(255,255,255,0.30)]' src="/logos/promodevelopers.gif" alt="Image" /></a>
-        <a target='blank' className='ms:h-[200px] w-fit md:w-[200px]' href="https://www.promogarlic.com/"><img className='h-full object-contain hover:-translate-y-4 transition-all duration-200 cursor-pointer drop-shadow-[0_20px_20px_rgba(255,255,255,0.30)]' src="/logos/promogarlic.gif" alt="Image" /></a>
-        <a target='blank' className='ms:h-[200px] w-fit md:w-[200px]' href="https://www.promofarms.com/"><img className='h-full object-contain hover:-translate-y-4 transition-all duration-200 cursor-pointer drop-shadow-[0_20px_20px_rgba(255,255,255,0.30)]' src="/logos/promofarms.gif" alt="Image" /></a>
+      <section className="border-b-2 py-3 w-11/12 mx-auto text-white flex flex-col gap-2">
+        <h2 className="text-lg w-fit mx-auto  pb-1">Follow us on</h2>
+        <section className="flex flex-row gap-7 items-center w-fit mx-auto py-2 text-white">
+          <a className='border rounded-full p-2 hover:border-yellow-500' href='https://www.facebook.com/TechnoPakConstruction/' target="_blank"><BsFacebook size={25}></BsFacebook></a>
+          <a className='border rounded-full p-2 hover:border-yellow-500' href='https://www.instagram.com' target="_blank"><BsInstagram size={25}></BsInstagram></a>
+          <a className='border rounded-full p-2 hover:border-yellow-500' href='https://www.linkedin.com' target="_blank"><BsLinkedin size={25}></BsLinkedin></a>
+          <a className='border rounded-full p-2 hover:border-yellow-500' href='https://www.youtube.com' target="_blank"><BsYoutube size={25}></BsYoutube></a>
+        </section>
       </section>
-      <div className="p-5 px-10 bg-black flex justify-between text-white">
-        <div>&copy; 2023 Promo Brick Ltd | Privacy Notice | Terms & Conditions</div>
-        <div>Built by FurmTech</div>
-      </div>
-    </div>
-  )
+      <section className="p-3 text-white flex justify-center items-center bg-black">
+        &copy; 2018 - Promo Developers | All Rights Reserved
+      </section>
+    </section>
+  );
 }
+
+export default Footer;

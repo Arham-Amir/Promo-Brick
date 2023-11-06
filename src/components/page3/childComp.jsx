@@ -7,99 +7,117 @@ const ChildComp = () => {
   const [type, settype] = useState('Handmade Red');
   const [data, setdata] = useState({
     'Handmade Red': {
-      'type':"Clay Brick",
-      'size':"10m",
-      'color':"Red",
-      'img': '/page3/handmade1.png',
-      'desc': "Handmade brick are made by skilled craftsmen and involves throwing a ‘clot’ of clay into a sanded mould. This results in a characterful, unique product with a tighter texture than machine made equivalents.",
-      'data':  [
+      'type': "Clay Brick",
+      'size': "Imperial/Metric",
+      'color': "Red with white bends",
+      'img': '/Facing/handmade1.png',
+      'desc': "Craftspeople with great talent create handmade bricks by depositing a clay \"clot\" into a sanded mold. As a result, the product has a tighter texture than its machine-made counterparts and has personality and uniqueness.",
+      'data': [
         {
           'Name': 'Smooth Red',
-          'Img': ['/page3/HandmadeSmoothRed1.png', '/page3/HandmadeSmoothRed2.png']
+          'Img': ['/Facing/HandmadeSmoothRed1.png', '/Facing/HandmadeSmoothRed2.png']
         },
         {
           'Name': 'Weathered',
-          'Img': ['/page3/HandmadeWeathered1.png', '/page3/HandmadeWeathered2.png']
+          'Img': ['/Facing/HandmadeWeathered1.png', '/Facing/HandmadeWeathered2.png']
         },
         {
           'Name': 'Reclaimed',
-          'Img': ['/page3/HandmadeReclaimed1.png', '/page3/HandmadeReclaimed2.png']
+          'Img': ['/Facing/HandmadeReclaimed1.png', '/Facing/HandmadeReclaimed2.png']
         },
         {
           'Name': 'Weather Tumbled',
-          'Img': ['/page3/HandmadeWeatheredTumbled1.png', '/page3/HandmadeWeatheredTumbled2.png']
+          'Img': ['/Facing/HandmadeWeatheredTumbled1.png', '/Facing/HandmadeWeatheredTumbled2.png']
         },
       ],
     },
     'Handmade Yellow': {
-      'type':"Clay Brick",
-      'size':"10m",
-      'color':"Red",
-      'img': '/page3/handmadeyellow.png',
-      'desc': "Handmade brick are made by skilled craftsmen and involves throwing a ‘clot’ of clay into a sanded mould. This results in a characterful, unique product with a tighter texture than machine made equivalents.",
-      'data':  [
+      'type': "Clay Brick",
+      'size': "Imperial/Metric",
+      'color': "Yellow-Pale yellow",
+      'img': '/Facing/handmadeyellow.png',
+      'desc': "Craftspeople with great talent create handmade bricks by depositing a clay \"clot\" into a sanded mold. As a result, the product has a tighter texture than its machine-made counterparts and has personality and uniqueness.",
+      'data': [
         {
           'Name': 'Simple',
-          'Img': ['/page3/HandmadeSimple1.png', '/page3/HandmadeSimple2.png']
+          'Img': ['/Facing/HandmadeSimple1.png', '/Facing/HandmadeSimple2.png']
         },
         {
           'Name': 'Textured',
-          'Img': ['/page3/HandmadeTextured1.png', '/page3/HandmadeTextured2.png']
+          'Img': ['/Facing/HandmadeTextured1.png', '/Facing/HandmadeTextured2.png']
         },
         {
           'Name': 'Half Shaded',
-          'Img': ['/page3/HandmadeHalfShaded1.png', '/page3/HandmadeHalfShaded2.png']
+          'Img': ['/Facing/HandmadeHalfShaded1.png', '/Facing/HandmadeHalfShaded2.png']
         },
       ],
     },
     'Wire Cut': {
-      'type':"Clay Brick",
-      'size':"10m",
-      'color':"Red",
-      'img': '/page3/wirecut.png',
-      'desc': "Handmade brick are made by skilled craftsmen and involves throwing a ‘clot’ of clay into a sanded mould. This results in a characterful, unique product with a tighter texture than machine made equivalents.",
-      'data':  [
+      'type': "Clay Brick",
+      'size': "Imperial/Metric",
+      'color': "Red-Orange with white bands",
+      'img': '/Facing/wirecut.png',
+      'desc': "Clay is squeezed into a long, rectangular shape by forcing it through an extruder. A die is then used to cut the necessary brick module, and wires are used to cut each brick individually. Character can be added by adding different textures. A clean, square, modular brick is the end product.",
+      'data': [
         {
           'Name': 'Simple',
-          'Img': ['/page3/wirecutSimple1.png', '/page3/wirecutSimple2.png']
+          'Img': ['/Facing/wirecutSimple1.png', '/Facing/wirecutSimple2.png']
         },
         {
           'Name': 'Weathered',
-          'Img': ['/page3/wirecutWeathered1.png', '/page3/wirecutWeathered2.png']
+          'Img': ['/Facing/wirecutWeathered1.png', '/Facing/wirecutWeathered2.png']
         },
         {
           'Name': 'Tiles',
-          'Img': ['/page3/wirecutslips1.png', '/page3/HandmadeHalfShaded2.png']
+          'Img': ['/Facing/wirecutslips1.png', '/Facing/HandmadeHalfShaded2.png']
         },
       ],
     },
     'Machine Press': {
-      'type':"Clay Brick",
-      'size':"10m",
-      'color':"Red",
-      'img': '/page3/machinepress.png',
+      'type': "Clay Brick",
+      'size': "Imperial/Metric",
+      'color': "Multi Colours",
+      'img': '/Facing/machinepress.png',
       'desc': "Handmade brick are made by skilled craftsmen and involves throwing a ‘clot’ of clay into a sanded mould. This results in a characterful, unique product with a tighter texture than machine made equivalents.",
-      'data':  [
+      'data': [
         {
           'Name': 'Simple',
-          'Img': ['/page3/MachinePressSimple1.png', '/page3/MachinePressSimple2.png']
+          'Img': ['/Facing/MachinePressSimple1.png', '/Facing/MachinePressSimple2.png']
         },
         {
           'Name': 'Weathered',
-          'Img': ['/page3/MachinePressWeathered1.png', '/page3/MachinePressWeathered2.png']
+          'Img': ['/Facing/MachinePressWeathered1.png', '/Facing/MachinePressWeathered2.png']
         },
         {
           'Name': 'Tiles',
-          'Img': ['/page3/MachinePressTiles1.png', '/page3/MachinePressTiles2.png']
+          'Img': ['/Facing/MachinePressTiles1.png', '/Facing/MachinePressTiles2.png']
         },
       ],
     },
   });
   return (
-    <section className="flex flex-row bg-bg relative">
-      <Types data={Object.keys(data)} settype={(t) => settype(t)} type={type} />
-      <SelectedType data={data[type]} type = {type} />
-    </section>
+    <>
+
+      <section className="flex flex-row bg-bg relative">
+        <Types data={Object.keys(data)} settype={(t) => settype(t)} type={type} />
+        <SelectedType data={data[type]} type={type} />
+      </section>
+      <div className="bg-white flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-11/12 mx-auto px-5 py-2 my-8">
+        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
+          {/* Add a pseudo-element with a transparent background */}
+          <div className="absolute bg-cover md:hidden inset-0 bg-black opacity-50 z-10" />
+          <div className="relative z-20 flex flex-col gap-5">
+            <h1 className="text-5xl font-bold font-heading">Facing Brick</h1>
+            <p className="text-base font-medium w-11/12 font-text">
+              Facing bricks, as the name implies, are manufactured to be used as facing, i.e. as the exterior of the wall. These bricks are different from other structural brickwork and carry a very clean and even appearance. Since their primary use is to make the look of the building aesthetic and pleasant, facing bricks are made of different kinds of materials, mainly clay.
+            </p>
+          </div>
+        </div>
+        <div className="xs:h-[40vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
+          <img className="h-full w-full object-cover  rounded-lg" src="/Facing/facing.jpg" alt="Brick Man" />
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -53,14 +53,12 @@ const ProductionProcess = (props = {}) => {
     },
     {
       'name': 'MIXING & FORMING',
-      'about': 'sadhajskd sadjasn asjkd asj djas das djkandkjas dasdasd',
+      'about': '',
       'duration': 'May 2018 - Present',
       'description': [
-        'Securing the clay',
-        'Beneficiation',
-        'Mixing and forming',
-        'Drying',
-        'Firing and cooling',
+        "Extruded Bricks: In this stiff mud process the clay is mixed with water to render its plastic after which it is forced through a die that extrudes a column of clay like toothpaste. The column gives two dimensions of the unit: it is cut by the wire to give the third dimension.",
+      "Molded Bricks: The older method of forming the brick, the soft mud process much more water is used. The mix is put in wooden or steals moulds to form the size unit required. Moulds are lubricated with sand or water. These are called sand struck or water struck bricks.",
+      "Pressed bricks: Clays with very low plasticity are used in the dry press-process.",
       ]
     },
     {
@@ -68,11 +66,6 @@ const ProductionProcess = (props = {}) => {
       'about': 'After the bricks are formed, they must be dried to remove as much as free water as possible. Drying a part from sun drying is done in direct dryers with controlled temperatures draft and humidity.',
       'duration': 'May 2018 - Present',
       'description': [
-        'Securing the clay',
-        'Beneficiation',
-        'Mixing and forming',
-        'Drying',
-        'Firing and cooling',
       ]
     },
     {
@@ -80,11 +73,8 @@ const ProductionProcess = (props = {}) => {
       'about': 'Bricks are fired and cooled in a kiln an oven type chamber capable of producing temperatures 870C to 1100C (1600-2000f) Depending on the type of raw material.',
       'duration': 'May 2018 - Present',
       'description': [
-        'Securing the clay',
-        'Beneficiation',
-        'Mixing and forming',
-        'Drying',
-        'Firing and cooling',
+        'Periodic',
+        'Continuous'
       ]
     },
     {
@@ -92,11 +82,11 @@ const ProductionProcess = (props = {}) => {
       'about': 'The testing of materials is one of the important requirements of civil work from quality control point of view.',
       'duration': 'May 2018 - Present',
       'description': [
-        'Securing the clay',
-        'Beneficiation',
-        'Mixing and forming',
-        'Drying',
-        'Firing and cooling',
+        "CRUSHING STRENGTH TEST",
+        "WATER ABSORPTION TEST",
+        "EFFLORESCENCE TEST",
+        "EFFLORESCENCE AFTER CONSTRUCTION",
+        "DIMENTIONAL TEST",
       ]
     },
 
@@ -139,7 +129,7 @@ const ProductionProcess = (props = {}) => {
             </section>
             <section className="expDetail xs:w-full md:w-auto flex flex-col gap-1 font-text">
               <h1 className="text-2xl font-semibold text-black font-heading">{experiences[curexp]['name']}</h1>
-              <h1 className="text-sm 2xl:text-2xl text-black w-auto">{experiences[curexp]['about']}</h1>
+              <h1 className="text-sm 2xl:text-2xl text-black md:w-4/5">{experiences[curexp]['about']}</h1>
               <p className="font-themeFont text-bgDark text-xs 2xl:text-base"> {experiences[curexp]['duration']}</p>
               <ProductionProcessDetail data={experiences[curexp]['description']} />
             </section>

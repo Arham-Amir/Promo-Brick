@@ -4,9 +4,9 @@ export default function Categories() {
   const content = [
     ['#EC6839', 'Building Bricks', "Building Bricks are rectangular blocks of baked clay used to form parts of buildings, typically walls. which are usually red or brown in color.", '/page2', '/images/buildingbg.jpg'],
     ['#62A86B', 'Facing Bricks', "Facing brick that is not needed just for the structure, but also for look, Designed, efficiency and value. You can see face bricks in homes, commercial buildings, public places,and etc.", '/page3', '/images/facingbg.jpg'],
-    ['#F2A644', 'Clay Tiles', "Clay Tiles are usually thin, square or rectangular in shape, manufactured from baked clay, they are generally used to cover roofs and floors.", '/page4', '/images/claybg.png'],
-    ['#9BD3C4', 'Slips', "Brick slips are specially manufactured tiles from facing bricks,when they are installed, they have the appearance, color and texture of a real clay brick wall.", '/page5', '/images/floorbg.jpg'],
-    ['#AB8FE5', 'Pots', "Quality products for quality builds", '/page6', '/images/potsbg.jpg'],
+    ['#9BD3C4', 'Brick Slips', "Brick slips are specially manufactured tiles from facing bricks,when they are installed, they have the appearance, color and texture of a real clay brick wall.", '/page4', '/images/brickslipsbg.png'],
+    ['#F2A644', 'Clay Tiles', "Clay Tiles are usually thin, square or rectangular in shape, manufactured from baked clay, they are generally used to cover roofs and floors.", '/page5', '/images/claybg.jpg'],
+    ['#AB8FE5', 'Pots', "Clay pots are an ancient material that has been used in the humblest of plant pots but also features in historical art like the Dynasty terracotta army.The material is fairly simple, just clay-based, but growing in terracotta has some benefits over plastic and other types of pots.", '/page6', '/images/potsbg.jpg'],
   ]
   return (
     <div className='relative bg-gray-700 font-text z-20 py-4'>

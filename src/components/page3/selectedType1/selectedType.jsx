@@ -6,7 +6,7 @@ const SelectedType1 = (props = {}) => {
       <h1 className="w-fit mx-auto text-3xl py-2 px-4 text-black">Hand Made</h1>
       <p className="w-20 p-[2px] mx-auto bg-black"></p>
       {props.data.map((data, index) => {
-        return <section key={index} className="shadow-md shadow-black p-5 mt-8  flex flex-row items-center justify-center w-full text-black">
+        return <section key={index} className="p-5 mt-8  flex flex-row items-center justify-center w-full text-black">
           <section className="flex-1 flex flex-col gap-5 items-center">
             <h1 className="text-2xl font-semibold">{data['Name']}</h1>
             <section className="flex flex-col gap-2">
