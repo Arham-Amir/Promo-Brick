@@ -57,7 +57,7 @@ const CategoryDetails = (props = {}) => {
       </div>
       <a href="" className='text-sm text-darkColor underline'>Download Report</a>
       <h2 className='text-themeColor text-3xl'>PKR 17.0</h2>
-      <section className='flex flex-col ms:flex-row gap-2'>
+      <section className='flex flex-col ms:flex-row items-center justify-center gap-2'>
         <section className="rounded-lg flex flex-row items-center border-2 border-bgLight justify-between p-2 w-fit mx-2">
           <button className='text-sm' onClick={() => decrementNumber()}>
             <AiOutlineMinus />
