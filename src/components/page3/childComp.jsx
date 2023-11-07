@@ -99,13 +99,12 @@ const ChildComp = () => {
   return (
     <>
 
-      <section className="flex flex-row bg-bg relative">
+      <section className="flex flex-col md:flex-row  bg-bg relative">
         <Types data={Object.keys(data)} settype={(t) => settype(t)} type={type} />
         <SelectedType data={data[type]} type={type} />
       </section>
-      <div className="bg-white flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
+      <div className="bg-white flex md:flex-row xs:flex-col xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
-          <div className="absolute bg-cover md:hidden inset-0 bg-black opacity-50 z-10" />
           <div className="relative z-20 flex flex-col gap-5 w-full">
             <h1 className="text-5xl font-bold font-heading">Facing Brick</h1>
             <p className="text-base font-medium w-full md:w-11/12 font-text">

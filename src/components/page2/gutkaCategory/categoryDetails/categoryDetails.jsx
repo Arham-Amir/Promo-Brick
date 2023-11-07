@@ -30,7 +30,7 @@ const CategoryDetails = (props = {}) => {
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappLink);
       toast.success('Thankyou for filling the form.')
-      document.getElementById('my_modal_4').close();
+      document.getElementById(props.data[1]).close();
       setEmail("");
       setUsername("");
       setPhoneNumber("");
