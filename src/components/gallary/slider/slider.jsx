@@ -49,7 +49,7 @@ const Slider = ({ data }) => {
       </section>
       <section ref={sliderRef} className="w-11/12 h-[300px] mx-auto overflow-hidden flex transition-all duration-200">
         {data.map((src, i) => {
-          return <LazyImage key={i} className="xs:w-full ms:min-w-[50%] ms:max-w-[50%] lg:min-w-[25%] lg:max-w-[25%] p-2 object-center" src={src} />
+          return <LazyImage key={i} className="xs:min-w-full xs:max-w-full ms:min-w-[50%] ms:max-w-[50%] lg:min-w-[25%] lg:max-w-[25%] p-2 object-center" src={src} />
         })}
       </section>
       <section className="absolute right-0 top-0 h-full p-1 text-3xl heading-bg">
