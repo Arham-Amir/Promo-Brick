@@ -94,8 +94,8 @@ const Navbar = () => {
                   <li><Link href="/page6" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Pots</Link></li>
                 </ul>
               </li>
-              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>Gallery</a></li>
-              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>About</a></li>
+              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href ="/gallery">Gallery</Link></li>
+              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/about">About</Link></li>
               <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Lin to="contactus" spy={true} smooth={true} duration={500} >Contact Us</Lin></li>
               <li><a href="https://www.promodevelopers.com" target="blank" className="py-3 text-white flex items-center justify-center h-fit bg-themeColor rounded-xl">Construct with us</a></li>
             </ul>
@@ -117,8 +117,8 @@ const Navbar = () => {
                 </ul>)}
               </details>
             </li>
-            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>Gallery</a></li>
-            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><a>About</a></li>
+            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href ="/gallery">Gallery</Link></li>
+            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/about">About</Link></li>
             <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Lin to="contactus" spy={true} smooth={true} duration={500} >Contact Us</Lin></li>
           </ul>
         </div>
