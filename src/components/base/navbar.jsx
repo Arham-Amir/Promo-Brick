@@ -9,6 +9,11 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   // const [ham, showHam] = useState(false);
   // const navRef = useRef(null);
   // const navRef2 = useRef(null);
@@ -75,13 +80,14 @@ const Navbar = () => {
       <Nav_Links path={path} childClass2="p-3" small='true' className="text-white flex items-center justify-center "></Nav_Links>
     </section> */
       }
-      <div className="navbar bg-bg h-[12vh]">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost md:hidden">
+      <div className="navbar bg-bg h-[12vh] z-30">
+        <div className="navbar-start flex-row-reverse md:flex-row justify-between md:justify-start w-full md:w-1/2">
+          <div className="dropdown z-30">
+            <label tabIndex={0} className="btn btn-ghost md:hidden" onClick={toggleDropdown}>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-20">
+            <ul tabIndex={0} onClick={()=> setIsDropdownOpen(false)}
+             className={`z-30 menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 ${isDropdownOpen ? 'block' : 'hidden'} right-0`}>
               <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor">
                 <Link href="/">Home</Link></li>
               <li >
@@ -94,7 +100,7 @@ const Navbar = () => {
                   <li><Link href="/page6" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Pots</Link></li>
                 </ul>
               </li>
-              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href ="/gallery">Gallery</Link></li>
+              <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/gallery">Gallery</Link></li>
               <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/about">About</Link></li>
               <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Lin to="contactus" spy={true} smooth={true} duration={500} >Contact Us</Lin></li>
               <li><a href="https://www.promodevelopers.com" target="blank" className="py-3 text-white flex items-center justify-center h-fit bg-themeColor rounded-xl">Construct with us</a></li>
@@ -106,7 +112,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">
             <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/">Home</Link></li>
             <li tabIndex={0} className="">
-              <details {...(dropdownOpen==false ? { open: true } : {})}>
+              <details {...(dropdownOpen == false ? { open: true } : {})}>
                 <summary onClick={() => setDropdownOpen(!dropdownOpen)} className="cursor-pointer  hover:scale-110 transition duration-100 hover:text-themeColor">Products</summary>
                 {dropdownOpen && (<ul className="p-2 z-30 min-w-max">
                   <li ><Link href="/page2" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Buildings Bricks</Link></li>
@@ -117,12 +123,12 @@ const Navbar = () => {
                 </ul>)}
               </details>
             </li>
-            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href ="/gallery">Gallery</Link></li>
+            <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/gallery">Gallery</Link></li>
             <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Link href="/about">About</Link></li>
             <li className="cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor"><Lin to="contactus" spy={true} smooth={true} duration={500} >Contact Us</Lin></li>
           </ul>
         </div>
-        <div className="hidden sm:flex navbar-end">
+        <div className="hidden md:flex navbar-end">
           <a href="https://www.promodevelopers.com" target="blank" className="btn text-white bg-themeColor rounded-xl">Construct with us</a>
         </div>
       </div>
