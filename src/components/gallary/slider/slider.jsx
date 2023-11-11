@@ -47,7 +47,7 @@ const Slider = ({ data }) => {
       <section className="absolute left-0 top-0 h-full p-1 text-3xl heading-bg border">
         <AiOutlineVerticalRight onClick={handelLeftClick} className="h-full cursor-pointer" />
       </section>
-      <section ref={sliderRef} className="w-11/12 h-[300px] mx-auto overflow-hidden flex transition-all duration-200">
+      <section ref={sliderRef} className="w-11/12 h-[300px] p-3 ms:p-0 mx-auto overflow-hidden flex transition-all duration-200">
         {data.map((src, i) => {
           return <LazyImage key={i} className="border xs:min-w-full xs:max-w-full ms:min-w-[50%] ms:max-w-[50%] lg:min-w-[25%] lg:max-w-[25%] object-center" src={src} />
         })}
