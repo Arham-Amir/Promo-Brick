@@ -11,8 +11,8 @@
   }
 
   .heading-bg {
-    background: radial-gradient(circle farthest-side, white, rgba(0, 0, 0, 0.075));
-    background-repeat: no-repeat;
+    /* background: radial-gradient(circle farthest-side, white, rgba(0, 0, 0, 0.075)); */
+    /* background-repeat: no-repeat; */
   }
 
   /* Hide ScrollBar */

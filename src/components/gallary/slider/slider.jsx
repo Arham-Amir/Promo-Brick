@@ -44,15 +44,15 @@ const Slider = ({ data }) => {
 
   return (
     <section className="p-5 my-5 mx-8 heading-bg relative">
-      <section className="absolute left-0 top-0 h-full p-1 text-3xl heading-bg">
+      <section className="absolute left-0 top-0 h-full p-1 text-3xl heading-bg border">
         <AiOutlineVerticalRight onClick={handelLeftClick} className="h-full cursor-pointer" />
       </section>
       <section ref={sliderRef} className="w-11/12 h-[300px] mx-auto overflow-hidden flex transition-all duration-200">
         {data.map((src, i) => {
-          return <LazyImage key={i} className="xs:min-w-full xs:max-w-full ms:min-w-[50%] ms:max-w-[50%] lg:min-w-[25%] lg:max-w-[25%] p-2 object-center" src={src} />
+          return <LazyImage key={i} className="border xs:min-w-full xs:max-w-full ms:min-w-[50%] ms:max-w-[50%] lg:min-w-[25%] lg:max-w-[25%] object-center" src={src} />
         })}
       </section>
-      <section className="absolute right-0 top-0 h-full p-1 text-3xl heading-bg">
+      <section className="absolute right-0 top-0 h-full p-1 text-3xl heading-bg border">
         <AiOutlineVerticalLeft onClick={handelRightClick} className="h-full cursor-pointer" />
       </section>
     </section>
