@@ -22,7 +22,7 @@ const Slideshow = ({ images }) => {
         />
       </div>
 
-      <button
+      {/* <button
         className="prev absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 font-bold text-xl cursor-pointer text-black transition duration-300 hover:bg-gray-300 hover:text-black"
         onClick={prevSlide}
       >
@@ -33,7 +33,7 @@ const Slideshow = ({ images }) => {
         onClick={nextSlide}
       >
         <IoIosArrowForward />
-      </button>
+      </button> */}
     </div>
   );
 };

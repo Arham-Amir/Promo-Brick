@@ -8,18 +8,18 @@ const SelectedType = (props = {}) => {
           <section className="w-max flex flex-col items-center">
             <h1 className="w-fit text-3xl md:text-5xl py-2 text-white font-heading font-bold">{props.type}</h1>
           </section>
-          <p className="font-text text-base text-white">{props.data['desc']}</p>
-          <section className="flex gap-2 items-center">
+          <p className="font-text text-base 2xl:text-xl text-white">{props.data['desc']}</p>
+          <section className="flex gap-2 items-center 2xl:text-xl">
             <p className="text-themeColor">Type</p>
             <p>-{'>'}</p>
             <p>{props.data['type']}</p>
           </section>
-          <section className="flex gap-2 items-center">
+          <section className="flex gap-2 items-center 2xl:text-xl">
             <p className="text-themeColor">Size</p>
             <p>-{'>'}</p>
             <p>{props.data['size']}</p>
           </section>
-          <section className="flex gap-2 items-center">
+          <section className="flex gap-2 items-center 2xl:text-xl">
             <p className="text-themeColor">Color</p>
             <p>-{'>'}</p>
             <p>{props.data['color']}</p>
@@ -46,9 +46,11 @@ function FurtherType(props = {}) {
     <section className="w-full my-5">
       <section className="w-full flex flex-col gap-3 text-white">
         <h1 className="text-4xl font-heading font-bold text-darkColor">{props.data['Name']} :</h1>
-        <section className="flex flex-col ms:flex-row gap-5 p-5 ms:m-5">
-          <section className="flex-1 bg-darkColor"> <LazyImage className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][0]}/></section>
-          <section className="flex-1 bg-darkColor"> <LazyImage className=" border bg-bg border-Light h-[350px] object-fill w-full" src={props.data['Img'][1]}/></section>
+        <section className="flex flex-col ms:flex-row gap-5 2xl:gap-10 p-5 ms:m-5">
+          <section className="flex-1 bg-darkColor">
+          <LazyImage className=" border bg-bg border-Light h-[350px] 2xl:h-[430px] object-fill w-full" src={props.data['Img'][0]}/></section>
+          <section className="flex-1 bg-darkColor">
+          <LazyImage className=" border bg-bg border-Light h-[350px] 2xl:h-[430px] object-fill w-full" src={props.data['Img'][1]}/></section>
         </section>
       </section>
     </section>
