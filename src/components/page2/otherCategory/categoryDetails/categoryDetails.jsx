@@ -25,7 +25,7 @@ const CategoryDetails = (props = {}) => {
       \nPhone Number: ${phonenumber}
       \nProduct: ${props.data[1]}
       \nQuantity: ${number}
-      \nTotal Price: ${number}
+      \nTotal Price: ${number * props.data[3]}
       `;
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappLink);
@@ -39,8 +39,23 @@ const CategoryDetails = (props = {}) => {
   return (
     <section className='flex flex-col items-center gap-3 p-5'>
       <h1 className='text-themeColor text-3xl'>{props.data[1]}</h1>
+      <div className='text-base mt-2'>
+        <section className="w-full">
+          <section className='w-auto'>
+            {Object.entries(props.data[2]).map(([key, value], i) => (
+              <section key={i} className='flex flex-row gap-8 justify-between'>
+                <section className='flex flex-row gap-3 items-start'>
+                  <p className="font-semibold">&#8226;</p>
+                  <p className="font-semibold">{key}:</p>
+                </section>
+                <p className='text-right'>{value}</p>
+              </section>
+            ))}
+          </section>
+        </section>
+      </div>
       <a href="" className='text-sm text-darkColor underline'>Download Report</a>
-      <h2 className='text-themeColor text-3xl'>PKR 17.0</h2>
+      <h2 className='text-themeColor text-3xl'>PKR {props.data[3]}</h2>
       <section className='flex flex-col ms:flex-row gap-2'>
         <section className="rounded-lg flex flex-row items-center border-2 border-bgLight justify-between p-2 w-fit mx-2">
           <button className='text-sm' onClick={() => decrementNumber()}>
@@ -89,7 +104,7 @@ const CategoryDetails = (props = {}) => {
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Total Price:</p>
-              <p className='ms:text-lg font-bold px-4 py-1'>{number}-/Pkr</p>
+              <p className='ms:text-lg font-bold px-4 py-1'>{number * props.data[3]}-/Pkr</p>
             </section>
             <section className='flex flex-row justify-around gap-1'>
               <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn'>Send Details</button>

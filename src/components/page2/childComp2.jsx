@@ -14,92 +14,57 @@ export default function ChildComp2() {
       "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
       "Water Absorption Rate": "13.79%",
       "Ultimate Stree": "2036",
-      "Price": "16",
-    }],
+    }, "16",],
     [['/Building/Special.png', '/Building/Special2.png', '/Building/Special1.png'], "Special Brick", {
       "Product Type": "A+ Class",
       "Weight": "3.39 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3",
       "Water Absorption Rate": "12.74 %",
       "Ultimate Stree (PSI)": "2288",
-      "Price": "20",
-    }],
+
+    },"20",],
     [['/Building/Doum.png', '/Building/Doum1.png'], "Doum Brick", {
       "Product Type": "A Class",
       "Weight": "3.23 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
       "Water Absorption Rate": "15.63 %",
       "Ultimate Stree (PSI)": "1493",
-      "Price": "12.5",
-    }],
+    }, "12.5"],
     [['/Building/PSK.png', '/Building/PSK2.png', '/Building/PSK1.png'], "Premium Brick", {
       "Product Type": "A++ Class",
       "Weight": "3.37 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
       "Water Absorption Rate": "12.39 %",
       "Ultimate Stree (PSI)": "3182",
-      "Price": "28",
-    }],
+    },"28"],
     [['/Building/Khinger.png', '/Building/Awal1.png'], "Khinger Brick", {
       "Product Type": "Class",
       "Weight": "Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
       "Water Absorption Rate": "15.63 %",
       "Ultimate Stree (PSI)": "1493",
-      "Price": "12.5",
-    }],
+    }, "12.5"],
   ]
   const gutkaarray = [
     [["/Building/gutka1.png"], "Gutka 1", {
-      "Product Type": "A Class",
-      "Weight": "3.25kg",
-      "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
-      "Water Absorption Rate": "13.79%",
-      "Ultimate Stree": "2036",
-      "Price": "16",
+      "Price": "14",
     }],
     [["/Building/gutka2.png"], "Gutka 2", {
-      "Product Type": "A+ Class",
-      "Weight": "3.39 Kg",
-      "Dimension (L*W*D)": "9.0*4.5*3",
-      "Water Absorption Rate": "12.74 %",
-      "Ultimate Stree (PSI)": "2288",
-      "Price": "16",
+      "Price": "14",
     }],
     [["/Building/gutka3.png"], "Gutka 3", {
-      "Product Type": "A Class",
-      "Weight": "3.23 Kg",
-      "Dimension (L*W*D)": "9.0*4.5*3 Inch",
-      "Water Absorption Rate": "15.63 %",
-      "Ultimate Stree (PSI)": "1493",
-      "Price": "16",
+      "Price": "14",
     }],
     [["/Building/gutka4.png"], "Gutka 4", {
-      "Product Type": "A++ Class",
-      "Weight": "3.37 Kg",
-      "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
-      "Water Absorption Rate": "12.39 %",
-      "Ultimate Stree (PSI)": "3182",
-      "Price": "16",
+      "Price": "14",
     }],
   ]
   const otherarray = [
-    [['/Building/Awal.png', '/Building/Awal1.png'], "Awal Bricks2", {
-      "Product Type": "A Class",
-      "Weight": "3.25kg",
-      "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
-      "Water Absorption Rate": "13.79%",
-      "Ultimate Stree": "2036",
-      "Price": "16",
-    }],
-    [['/Building/Special.png', '/Building/Special1.png'], "Special Brick2", {
-      "Product Type": "A+ Class",
-      "Weight": "3.39 Kg",
-      "Dimension (L*W*D)": "9.0*4.5*3",
-      "Water Absorption Rate": "12.74 %",
-      "Ultimate Stree (PSI)": "2288",
-      "Price": "16",
-    }],
+    [['/Building/Awal.png', '/Building/Awal1.png'], "Bhatta Tile", {
+    }, "16"],
+    [['/Building/Special.png', '/Building/Special1.png'], "Tennis Sand", {
+      "Ammount per bag": "30 kg",
+    }, "300"],
   ]
 
   return (

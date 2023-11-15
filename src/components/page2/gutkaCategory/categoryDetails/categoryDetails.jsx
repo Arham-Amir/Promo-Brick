@@ -25,7 +25,7 @@ const CategoryDetails = (props = {}) => {
       \nPhone Number: ${phonenumber}
       \nProduct: ${props.data[1]}
       \nQuantity: ${number}
-      \nTotal Price: ${number}
+      \nTotal Price: ${number * props.data[2]["Price"]}
       `;
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappLink);
@@ -40,7 +40,8 @@ const CategoryDetails = (props = {}) => {
     <section className='flex flex-col items-center gap-3 p-5'>
       <h1 className='text-themeColor text-3xl'>{props.data[1]}</h1>
       <a href="" className='text-sm text-darkColor underline'>Download Report</a>
-      <h2 className='text-themeColor text-3xl'>PKR 17.0</h2>
+      <h2 className='text-themeColor text-3xl'>PKR {props.data[2]["Price"]}</h2>
+      <h2 className='text-themeColor text-sm'>Total Price {(props.data[2]["Price"] * number).toLocaleString()}</h2>
       <section className='flex flex-col ms:flex-row gap-2'>
         <section className="rounded-lg flex flex-row items-center border-2 border-bgLight justify-between p-2 w-fit mx-2">
           <button className='text-sm' onClick={() => decrementNumber()}>
@@ -85,11 +86,11 @@ const CategoryDetails = (props = {}) => {
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Quantity:</p>
-              <p className='ms:text-lg font-bold px-4 py-1'>{number} Bricks</p>
+              <p className='ms:text-lg font-bold px-4 py-1'>{number} Gutka</p>
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Total Price:</p>
-              <p className='ms:text-lg font-bold px-4 py-1'>{number}-/Pkr</p>
+              <p className='ms:text-lg font-bold px-4 py-1'>{number * props.data[2]["Price"]}-/Pkr</p>
             </section>
             <section className='flex flex-row justify-around gap-1'>
               <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn'>Send Details</button>
