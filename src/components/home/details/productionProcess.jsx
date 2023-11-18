@@ -108,7 +108,7 @@ const ProductionProcess = (props = {}) => {
       <section id='experience' className={`${props.className} xs:py-20 flex xs:justify-center md:justify-end font-text`}>
         <article className="h-full transition-all duration-150 w-[90%] flex flex-col xl:p-7 pr-4">
           <section className="mb-10 cursor-pointer flex items-center flex-row gap-5 font-bold transition-all duration-150 xs:w-full md:w-[75%]">
-            <p className="text-black xs:text-xl md:text-4xl 2xl:text-4xl 3xl:text-5xl font-heading">
+            <p className="text-black text-3xl ms:text-5xl font-heading">
               Brick Production Process
             </p>
             <span className="bg-black h-[1px] flex-1"></span>

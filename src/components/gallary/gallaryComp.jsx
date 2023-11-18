@@ -1,6 +1,7 @@
 import { FaHome } from 'react-icons/fa'
 import { AiFillQuestionCircle } from 'react-icons/ai'
 import Slider from './slider/slider';
+import Link from 'next/link';
 
 const GallaryComp = () => {
   const buildingBrickImages = [
@@ -101,8 +102,8 @@ const GallaryComp = () => {
     <section>
       <section className='flex flex-row items-center justify-end ms:justify-between w-4/5 mx-auto pt-5'>
         <section className='hidden ms:flex flex-row gap-3 items-center'>
-          <FaHome size={30} />
-          <p className='text-lg'>Home/Gallery</p>
+        <Link className='hover:text-themeColor' href="/"><FaHome size={30} /></Link>
+            <p className='text-lg'><Link className='hover:text-themeColor' href="/">Home</Link>/Gallery</p>
         </section>
         <a href={'https://wa.me/+923004439445'} target='_blank' className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
           <AiFillQuestionCircle size={30} />
