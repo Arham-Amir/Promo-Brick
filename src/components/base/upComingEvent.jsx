@@ -8,7 +8,7 @@ const UpComingEvent = () => {
       <button onClick={() => document.getElementById("upComingEvent").showModal()} className="fixed top-1/4 border right-0 z-40 bg-transparent bg-white vertical-text w-fit px-2 py-4 rounded-r-lg">
         <p className='text-green-500' size={40} >UpComingEvent</p>
       </button>
-      <dialog id={`upComingEvent`} className="m-auto modal min-w-[80vw] max-w-[80vw] h-[90vh]">
+      <dialog id={`upComingEvent`} className="m-auto modal min-w-[80vw] max-w-[80vw] h-[85vh] md:h-[90vh]">
         <div className="modal-box flex flex-col gap-5 items-center w-full h-full">
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-black">✕</button>

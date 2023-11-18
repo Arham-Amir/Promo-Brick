@@ -12,6 +12,7 @@
 
   .vertical-text {
     writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
     transform: rotate(180deg);
   }
   .clipEvent{

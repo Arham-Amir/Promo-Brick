@@ -60,13 +60,13 @@ export default function ChildComp2() {
     }],
   ]
   const otherarray = [
-    [['/Building/Awal.png', '/Building/Awal1.png'], "Bhatta Tile", {
+    [['/Building/bhatta1.png', '/Building/bhatta2.png', '/Building/bhatta3.png', '/Building/bhatta4.png', '/Building/bhatta5.png'], "Bhatta Tile", {
     }, "16"],
     [['/Building/Special.png', '/Building/Special1.png'], "Tennis Sand", {
-      "Ammount per bag": "30 kg",
+
     }, "300"],
   ]
-
+  // "Ammount per bag": "30 kg",
   return (
     <>
       <section className='h-auto max-w-screen'>
