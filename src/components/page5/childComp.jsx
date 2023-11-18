@@ -4,6 +4,7 @@ import Card from "./card/card";
 import { FaHome } from 'react-icons/fa'
 import { AiFillQuestionCircle } from 'react-icons/ai'
 import LazyImage from "@components/base/lazyImage";
+import Link from "next/link";
 
 const ChildComp = () => {
   const [arr, setarr] = useState([
@@ -20,8 +21,8 @@ const ChildComp = () => {
       <section>
         <section className='flex flex-row items-center justify-end ms:justify-between w-4/5 mx-auto pt-5'>
           <section className='hidden ms:flex flex-row gap-3 items-center'>
-            <FaHome size={30} />
-            <p className='text-lg'>Home/Clay Tiles</p>
+            <Link className='hover:text-themeColor' href="/"><FaHome size={30} /></Link>
+            <p className='text-lg'><Link className='hover:text-themeColor' href="/">Home</Link>/Clay Tiles</p>
           </section>
           <a href={'https://wa.me/+923004439445'} target='_blank' className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
             <AiFillQuestionCircle size={30} />

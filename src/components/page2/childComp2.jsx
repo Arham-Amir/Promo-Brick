@@ -5,10 +5,11 @@ import { AiFillQuestionCircle } from 'react-icons/ai'
 import GutkaCategory from './gutkaCategory/gutkaCategory';
 import OtherCategory from './otherCategory/otherCategory';
 import LazyImage from '@components/base/lazyImage';
+import Link from 'next/link';
 
 export default function ChildComp2() {
   const contentarray = [
-    [['/Building/Awal.png','/Building/Awal2.png', '/Building/Awal1.png'], "Awal Bricks", {
+    [['/Building/Awal.png', '/Building/Awal2.png', '/Building/Awal1.png'], "Awal Bricks", {
       "Product Type": "A Class",
       "Weight": "3.25kg",
       "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
@@ -22,7 +23,7 @@ export default function ChildComp2() {
       "Water Absorption Rate": "12.74 %",
       "Ultimate Stree (PSI)": "2288",
 
-    },"20",],
+    }, "20",],
     [['/Building/Doum.png', '/Building/Doum1.png'], "Doum Brick", {
       "Product Type": "A Class",
       "Weight": "3.23 Kg",
@@ -36,7 +37,7 @@ export default function ChildComp2() {
       "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
       "Water Absorption Rate": "12.39 %",
       "Ultimate Stree (PSI)": "3182",
-    },"28"],
+    }, "28"],
     [['/Building/Khinger.png', '/Building/Awal1.png'], "Khinger Brick", {
       "Product Type": "Class",
       "Weight": "Kg",
@@ -72,8 +73,8 @@ export default function ChildComp2() {
       <section className='h-auto max-w-screen'>
         <section className='flex flex-row items-center justify-end ms:justify-between w-4/5 mx-auto pt-5'>
           <section className='hidden ms:flex flex-row gap-3 items-center'>
-            <FaHome size={30} />
-            <p className='text-lg'>Home/Building Bricks</p>
+            <Link className='hover:text-themeColor' href="/"><FaHome size={30} /></Link>
+            <p className='text-lg'><Link className='hover:text-themeColor' href="/">Home</Link>/Building Bricks</p>
           </section>
           <a href={'https://wa.me/+923004439445'} target='_blank' className='flex flex-row gap-3 items-center py-2 px-4 w-fit shadow-lg border border-bgLight'>
             <AiFillQuestionCircle size={30} />
