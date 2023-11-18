@@ -3,20 +3,20 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import { ToastContainer } from 'react-toastify';
 
 const CategoryDetails = (props = {}) => {
-  const [number, setNumber] = useState(1000);
+  const [number, setNumber] = useState(1);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [phonenumber, setPhoneNumber] = useState('');
   const [address, setAddress] = useState('');
 
   const incrementNumber = () => {
-    setNumber(number + 1000);
+    setNumber(number + 1);
   };
   const decrementNumber = () => {
-    number != 1000 && setNumber(number - 1000);
+    number != 1 && setNumber(number - 1);
   };
   const handleSubmitClick = () => {
-    if (username == '' || email == '' || phonenumber == '') {
+    if (username == '' || address == '' || phonenumber == '') {
       toast.error('Please Complete All Form Fields First.');
     }
     else {
@@ -43,22 +43,21 @@ const CategoryDetails = (props = {}) => {
     <section className='flex flex-col items-center justify-between gap-3 p-5'>
       <h1 className='text-themeColor text-3xl'>{props.data[1]}</h1>
       <section className='flex flex-col items-center gap-3'>
-        <div className='text-base mt-2'>
-          <section className="w-full">
-            <section className='w-auto'>
-              {Object.entries(props.data[2]).map(([key, value], i) => (
-                <section key={i} className='flex flex-row gap-8 justify-between'>
-                  <section className='flex flex-row gap-3 items-start'>
-                    <p className={`${key == " " && "invisible"} font-semibold`}>&#8226;</p>
-                    <p className="font-semibold">{key} {key != " " && ':'}</p>
-                  </section>
-                  <p className='text-right'>{value}</p>
+      <div className='text-base mt-2'>
+        <section className="w-full">
+          <section className='w-auto'>
+            {Object.entries(props.data[2]).map(([key, value], i) => (
+              <section key={i} className='flex flex-row gap-2 justify-between'>
+                <section className='flex flex-row gap-3 items-start'>
+                  <p className="font-semibold">{key}:</p>
                 </section>
-              ))}
-            </section>
+                <p className='text-right'>{value}</p>
+              </section>
+            ))}
           </section>
-        </div>
-        <h2 className='text-themeColor text-3xl'>PKR {props.data[3]}</h2>
+        </section>
+      </div>
+        <h2 className='text-themeColor text-3xl'>PKR {props.data[3]} <span className='text-sm'>/bag</span></h2>
         <h2 className='text-themeColor text-sm'>Total Price {(props.data[3] * number).toLocaleString()}</h2>
         <section className='flex flex-col ms:flex-row gap-2'>
           <section className="rounded-lg flex flex-row items-center border-2 border-bgLight justify-between p-2 w-fit mx-2">
@@ -112,7 +111,7 @@ const CategoryDetails = (props = {}) => {
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Quantity:</p>
-              <p className='ms:text-lg font-bold px-4 py-1'>{number} Bricks</p>
+              <p className='ms:text-lg font-bold px-4 py-1'>{number} Bags</p>
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Total Price:</p>
@@ -121,7 +120,6 @@ const CategoryDetails = (props = {}) => {
             <section className='flex flex-row justify-around gap-1'>
               <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn border-0 bg-themeColor'>Confirm Order</button>
             </section>
-            {/* <iframe className='w-full h-full' src="https://docs.google.com/forms/d/e/1FAIpQLSfjMUTbqz6CTpcUKyLU6jUBzVDkJJzHmv3K7hZLxA53NI8VgQ/viewform?embedded=true">Loading…</iframe> */}
           </div>
         </div>
       </dialog>
