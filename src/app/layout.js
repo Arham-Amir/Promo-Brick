@@ -5,6 +5,7 @@ import Footer from '@components/base/footer/footer'
 import ContactUs from '@components/base/contactUs/contactUs'
 import 'react-toastify/dist/ReactToastify.css';
 import ContactPopUpBtn from '@components/base/contactPopUpBtn'
+import UpComingEvent from '@components/base/upComingEvent'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${glass.variable} ${figtree.variable} ${inter.className} overflow-x-hidden max-w-screen font-text bg-bg`}>
         <ContactPopUpBtn />
+        <UpComingEvent />
         <Navbar />
         {children}
         <ContactUs />
