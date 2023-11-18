@@ -17,7 +17,7 @@ const Slideshow = ({ images }) => {
     <div className="relative w-full h-full">
       <div className="w-full h-full">
         <LazyImage
-          className="w-full h-full object-fill"
+          className="w-full h-full object-contain"
           src={images[currentSlide]}
         />
       </div>

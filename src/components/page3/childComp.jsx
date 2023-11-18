@@ -5,8 +5,29 @@ import Types from "./types/types";
 import LazyImage from "@components/base/lazyImage";
 
 const ChildComp = () => {
-  const [type, settype] = useState('Handmade Red');
+  const [type, settype] = useState('Handmade Yellow');
   const [data, setdata] = useState({
+    'Handmade Yellow': {
+      'type': "Clay Brick",
+      'size': "Imperial/Metric",
+      'color': "Yellow-Pale yellow",
+      'img': '/Facing/handmadeyellow.png',
+      'desc': "Craftspeople with great talent create handmade bricks by depositing a clay \"clot\" into a sanded mold. As a result, the product has a tighter texture than its machine-made counterparts and has personality and uniqueness.",
+      'data': [
+        {
+          'Name': 'Simple',
+          'Img': ['/Facing/HandmadeSimple1.png', '/Facing/HandmadeSimple2.png']
+        },
+        {
+          'Name': 'Textured',
+          'Img': ['/Facing/HandmadeTextured1.png', '/Facing/HandmadeTextured2.png']
+        },
+        {
+          'Name': 'Half Shaded',
+          'Img': ['/Facing/HandmadeHalfShaded1.png', '/Facing/HandmadeHalfShaded2.png']
+        },
+      ],
+    },
     'Handmade Red': {
       'type': "Clay Brick",
       'size': "Imperial/Metric",
@@ -29,27 +50,6 @@ const ChildComp = () => {
         {
           'Name': 'Weather Tumbled',
           'Img': ['/Facing/HandmadeWeatheredTumbled1.png', '/Facing/HandmadeWeatheredTumbled2.png']
-        },
-      ],
-    },
-    'Handmade Yellow': {
-      'type': "Clay Brick",
-      'size': "Imperial/Metric",
-      'color': "Yellow-Pale yellow",
-      'img': '/Facing/handmadeyellow.png',
-      'desc': "Craftspeople with great talent create handmade bricks by depositing a clay \"clot\" into a sanded mold. As a result, the product has a tighter texture than its machine-made counterparts and has personality and uniqueness.",
-      'data': [
-        {
-          'Name': 'Simple',
-          'Img': ['/Facing/HandmadeSimple1.png', '/Facing/HandmadeSimple2.png']
-        },
-        {
-          'Name': 'Textured',
-          'Img': ['/Facing/HandmadeTextured1.png', '/Facing/HandmadeTextured2.png']
-        },
-        {
-          'Name': 'Half Shaded',
-          'Img': ['/Facing/HandmadeHalfShaded1.png', '/Facing/HandmadeHalfShaded2.png']
         },
       ],
     },
@@ -103,7 +103,7 @@ const ChildComp = () => {
         <Types data={Object.keys(data)} settype={(t) => settype(t)} type={type} />
         <SelectedType data={data[type]} type={type} />
       </section>
-      <div className="bg-white flex md:flex-row xs:flex-col xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
+      <div className="bg-white flex md:flex-row xs:flex-col xs:h-auto md:h-[70vh] w-full md:w-4/5 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
           <div className="relative z-20 flex flex-col gap-5 w-full">
             <h1 className="text-5xl font-bold font-heading">Facing Brick</h1>

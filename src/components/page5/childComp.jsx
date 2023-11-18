@@ -36,14 +36,14 @@ const ChildComp = () => {
         </section>
       </section>
 
-      <div className="flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
+      <div className="flex md:flex-row xs:flex-col-reverse xs:h-auto md:h-[70vh] w-full md:w-4/5 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
           <div className="relative z-20 flex flex-col gap-5 w-full">
             <h1 className="text-5xl font-bold font-heading">Clay Tiles</h1>
-            <p className="text-sm font-medium w-full md:w-11/12 font-text">
+            <p className="text-base font-medium w-full md:w-11/12 font-text">
               Clay tiles are a type of hard, modular surface covering used to cover floors in homes, commercial buildings, and other structures. They are typically made in relatively small, repeating units, from materials like baked clay or cement, and come in a variety of shapes, sizes, colors, and designs.
             </p>
-            <p className="text-sm font-medium w-full md:w-11/12 font-text">
+            <p className="text-base font-medium w-full md:w-11/12 font-text">
               Floor tiles are popular because they are durable, easy to clean, and can add aesthetic appeal to a room. They are commonly used in entryways,lawns and other areas that see heavy foot traffic.
             </p>
           </div>

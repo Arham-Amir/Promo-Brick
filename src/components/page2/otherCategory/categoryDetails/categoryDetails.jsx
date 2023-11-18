@@ -7,6 +7,7 @@ const CategoryDetails = (props = {}) => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [phonenumber, setPhoneNumber] = useState('');
+  const [address, setAddress] = useState('');
 
   const incrementNumber = () => {
     setNumber(number + 1000);
@@ -25,6 +26,7 @@ const CategoryDetails = (props = {}) => {
       \nPhone Number: ${phonenumber}
       \nProduct: ${props.data[1]}
       \nQuantity: ${number}
+      \nAddress: ${address}
       \nTotal Price: ${number * props.data[3]}
       `;
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -34,28 +36,29 @@ const CategoryDetails = (props = {}) => {
       setEmail("");
       setUsername("");
       setPhoneNumber("");
+      setAddress("");
     }
   };
   return (
     <section className='flex flex-col items-center justify-between gap-3 p-5'>
       <h1 className='text-themeColor text-3xl'>{props.data[1]}</h1>
       <section className='flex flex-col items-center gap-3'>
-      <div className='text-base mt-2'>
-        <section className="w-full">
-          <section className='w-auto'>
-            {Object.entries(props.data[2]).map(([key, value], i) => (
-              <section key={i} className='flex flex-row gap-8 justify-between'>
-                <section className='flex flex-row gap-3 items-start'>
-                  <p className="font-semibold">&#8226;</p>
-                  <p className="font-semibold">{key}:</p>
+        <div className='text-base mt-2'>
+          <section className="w-full">
+            <section className='w-auto'>
+              {Object.entries(props.data[2]).map(([key, value], i) => (
+                <section key={i} className='flex flex-row gap-8 justify-between'>
+                  <section className='flex flex-row gap-3 items-start'>
+
+                    <p className={`${key == " " && "invisible"} font-semibold`}>&#8226;</p>
+                    <p className="font-semibold">{key} {key != " " && ':'}</p>
+                  </section>
+                  <p className='text-right'>{value}</p>
                 </section>
-                <p className='text-right'>{value}</p>
-              </section>
-            ))}
+              ))}
+            </section>
           </section>
-        </section>
-      </div>
-        <a href="" className='text-sm text-darkColor underline'>Download Report</a>
+        </div>
         <h2 className='text-themeColor text-3xl'>PKR {props.data[3]}</h2>
         <section className='flex flex-col ms:flex-row gap-2'>
           <section className="rounded-lg flex flex-row items-center border-2 border-bgLight justify-between p-2 w-fit mx-2">
@@ -77,24 +80,31 @@ const CategoryDetails = (props = {}) => {
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-black">✕</button>
           </form>
           <div className="modal-box w-full h-full bg-bgLight flex flex-col gap-3 font-text">
-            <p className='text-xs ms:px-5 text-center'>We are collecting your detail and will contact you in order to proceed with your order.</p>
+            <p className='text-xs ms:px-5 text-center'>Please fill below fields to place order.</p>
             <section className='flex flex-col gap-1'>
-              <p className="text-base ms:text-2xl font-heading font-bold">Name:</p>
+              <p className="text-base ms:text-2xl font-heading font-bold">Name: <span className='text-red-700'>*</span></p>
               <input value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className='rounded-lg text-base mx-4 px-4 py-1' type="text" name="username" id="username" />
+            </section>
+
+            <section className='flex flex-col gap-1'>
+              <p className="text-base ms:text-2xl font-heading font-bold">Phone Number: <span className='text-red-700'>*</span></p>
+              <input value={phonenumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className='rounded-lg text-base mx-4 px-4 py-1' type="tel" name="phonenumber" id="phonenumber" />
+            </section>
+            <section className='flex flex-col gap-1'>
+              <p className="text-base ms:text-2xl font-heading font-bold">Address: <span className='text-red-700'>*</span></p>
+              <input value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                className='rounded-lg text-base mx-4 px-4 py-1' type="text" name="address" id="address" />
             </section>
             <section className='flex flex-col gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Email:</p>
               <input value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className='rounded-lg text-base mx-4 px-4 py-1' type="email" name="email" id="email" />
-            </section>
-            <section className='flex flex-col gap-1'>
-              <p className="text-base ms:text-2xl font-heading font-bold">Phone Number:</p>
-              <input value={phonenumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                className='rounded-lg text-base mx-4 px-4 py-1' type="tel" name="phonenumber" id="phonenumber" />
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Product:</p>
@@ -109,7 +119,7 @@ const CategoryDetails = (props = {}) => {
               <p className='ms:text-lg font-bold px-4 py-1'>{number * props.data[3]}-/Pkr</p>
             </section>
             <section className='flex flex-row justify-around gap-1'>
-              <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn'>Send Details</button>
+              <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn border-0 bg-themeColor'>Confirm Order</button>
             </section>
             {/* <iframe className='w-full h-full' src="https://docs.google.com/forms/d/e/1FAIpQLSfjMUTbqz6CTpcUKyLU6jUBzVDkJJzHmv3K7hZLxA53NI8VgQ/viewform?embedded=true">Loading…</iframe> */}
           </div>

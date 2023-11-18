@@ -2,16 +2,17 @@ import { useState } from 'react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
 const CategoryDetails = (props = {}) => {
-  const [number, setNumber] = useState(5000);
+  const [number, setNumber] = useState(6000);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [phonenumber, setPhoneNumber] = useState('');
+  const [address, setAddress] = useState('');
 
   const incrementNumber = () => {
-    setNumber(number + 1000);
+    setNumber(number + 6000);
   };
   const decrementNumber = () => {
-    number != 5000 && setNumber(number - 1000);
+    number != 6000 && setNumber(number - 6000);
   };
   const handleSubmitClick = () => {
     if (username == '' || email == '' || phonenumber == '') {
@@ -24,6 +25,7 @@ const CategoryDetails = (props = {}) => {
       \nPhone Number: ${phonenumber}
       \nProduct: ${props.data[1]}
       \nQuantity: ${number}
+      \nAddress: ${address}
       \nTotal Price: ${props.data[3] * number}
       `;
       const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -33,6 +35,7 @@ const CategoryDetails = (props = {}) => {
       setEmail("");
       setUsername("");
       setPhoneNumber("");
+      setAddress("");
     }
   };
 
@@ -55,7 +58,6 @@ const CategoryDetails = (props = {}) => {
           </section>
         </section>
       </div>
-      <a href="" className='text-sm text-darkColor underline'>Download Report</a>
       <h2 className='text-themeColor text-3xl'>PKR {props.data[3]}</h2>
       <h2 className='text-themeColor text-sm'>Total Price {(props.data[3] * number).toLocaleString()}</h2>
       <section className='flex flex-col ms:flex-row items-center justify-center gap-2'>
@@ -70,31 +72,38 @@ const CategoryDetails = (props = {}) => {
         </section>
         <button onClick={() => document.getElementById(props.data[1]).showModal()} className='rounded-lg bg-themeColor text-black px-3 py-2 w-fit text-base'>Place Order</button>
       </section>
-      <dialog id={`${props.data[1]}`} className="m-auto modal min-w-[80vw] max-w-[80vw] h-[80vh] lg:h-fit">
+      <dialog id={`${props.data[1]}`} className="m-auto modal min-w-[80vw] max-w-[80vw]  h-[80vh] lg:h-fit">
         <ToastContainer />
         <div className="modal-box flex flex-col gap-5 items-center w-full h-full">
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-black">✕</button>
           </form>
           <div className="modal-box w-full h-full bg-bgLight flex flex-col gap-3 font-text">
-            <p className='text-xs ms:px-5 text-center'>We are collecting your detail and will contact you in order to proceed with your order.</p>
+            <p className='text-xs ms:px-5 text-center'>Please fill below fields to place order.</p>
             <section className='flex flex-col gap-1'>
-              <p className="text-base ms:text-2xl font-heading font-bold">Name:</p>
+              <p className="text-base ms:text-2xl font-heading font-bold">Name: <span className='text-red-700'>*</span></p>
               <input value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 className='rounded-lg text-base mx-4 px-4 py-1' type="text" name="username" id="username" />
+            </section>
+
+            <section className='flex flex-col gap-1'>
+              <p className="text-base ms:text-2xl font-heading font-bold">Phone Number: <span className='text-red-700'>*</span></p>
+              <input value={phonenumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className='rounded-lg text-base mx-4 px-4 py-1' type="tel" name="phonenumber" id="phonenumber" />
+            </section>
+            <section className='flex flex-col gap-1'>
+              <p className="text-base ms:text-2xl font-heading font-bold">Address: <span className='text-red-700'>*</span></p>
+              <input value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                className='rounded-lg text-base mx-4 px-4 py-1' type="text" name="address" id="address" />
             </section>
             <section className='flex flex-col gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Email:</p>
               <input value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className='rounded-lg text-base mx-4 px-4 py-1' type="email" name="email" id="email" />
-            </section>
-            <section className='flex flex-col gap-1'>
-              <p className="text-base ms:text-2xl font-heading font-bold">Phone Number:</p>
-              <input value={phonenumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                className='rounded-lg text-base mx-4 px-4 py-1' type="tel" name="phonenumber" id="phonenumber" />
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Product:</p>
@@ -106,10 +115,10 @@ const CategoryDetails = (props = {}) => {
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Total Price:</p>
-              <p className='ms:text-lg font-bold px-4 py-1'>{props.data[3] * number}-/Pkr</p>
+              <p className='ms:text-lg font-bold px-4 py-1'>{number * props.data[3]}-/Pkr</p>
             </section>
             <section className='flex flex-row justify-around gap-1'>
-              <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn'>Send Details</button>
+              <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn border-0 bg-themeColor'>Confirm Order</button>
             </section>
             {/* <iframe className='w-full h-full' src="https://docs.google.com/forms/d/e/1FAIpQLSfjMUTbqz6CTpcUKyLU6jUBzVDkJJzHmv3K7hZLxA53NI8VgQ/viewform?embedded=true">Loading…</iframe> */}
           </div>

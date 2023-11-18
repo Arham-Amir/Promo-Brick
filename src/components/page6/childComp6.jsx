@@ -166,7 +166,7 @@ export default function ChildComp6() {
         </section>
       </section>
 
-      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
+      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-full md:w-4/5 mx-auto px-5 py-2 my-8">
         <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2
      px-7 flex flex-col justify-center items-end gap-6">
           <div className="relative z-20 flex flex-col gap-5 w-full">

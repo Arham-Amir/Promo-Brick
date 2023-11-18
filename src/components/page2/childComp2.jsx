@@ -6,6 +6,7 @@ import GutkaCategory from './gutkaCategory/gutkaCategory';
 import OtherCategory from './otherCategory/otherCategory';
 import LazyImage from '@components/base/lazyImage';
 import Link from 'next/link';
+import TenisSand from './tenis/otherCategory';
 
 export default function ChildComp2() {
   const contentarray = [
@@ -14,36 +15,36 @@ export default function ChildComp2() {
       "Weight": "3.25kg",
       "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
       "Water Absorption Rate": "13.79%",
-      "Ultimate Stree": "2036",
+      "Ultimate Stree": "2000",
     }, "16",],
     [['/Building/Special.png', '/Building/Special2.png', '/Building/Special1.png'], "Special Brick", {
       "Product Type": "A+ Class",
-      "Weight": "3.39 Kg",
+      "Weight": "3.25 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3",
       "Water Absorption Rate": "12.74 %",
-      "Ultimate Stree (PSI)": "2288",
+      "Ultimate Stree (PSI)": "2300",
 
     }, "20",],
     [['/Building/Doum.png', '/Building/Doum1.png'], "Doum Brick", {
-      "Product Type": "A Class",
-      "Weight": "3.23 Kg",
+      "Product Type": "B Class",
+      "Weight": "3.25 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
       "Water Absorption Rate": "15.63 %",
-      "Ultimate Stree (PSI)": "1493",
+      "Ultimate Stree (PSI)": "1500",
     }, "12.5"],
     [['/Building/PSK.png', '/Building/PSK2.png', '/Building/PSK1.png'], "Premium Brick", {
       "Product Type": "A++ Class",
-      "Weight": "3.37 Kg",
+      "Weight": "3.25 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
       "Water Absorption Rate": "12.39 %",
-      "Ultimate Stree (PSI)": "3182",
+      "Ultimate Stree (PSI)": "3200",
     }, "28"],
     [['/Building/Khinger.png', '/Building/Awal1.png'], "Khinger Brick", {
-      "Product Type": "Class",
-      "Weight": "Kg",
+      "Product Type": "B Class",
+      "Weight": "3.25 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
       "Water Absorption Rate": "15.63 %",
-      "Ultimate Stree (PSI)": "1493",
+      "Ultimate Stree (PSI)": "2100",
     }, "12.5"],
   ]
   const gutkaarray = [
@@ -61,13 +62,14 @@ export default function ChildComp2() {
     }],
   ]
   const otherarray = [
-    [['/Building/bhatta1.png', '/Building/bhatta2.png', '/Building/bhatta3.png', '/Building/bhatta4.png', '/Building/bhatta5.png'], "Bhatta Tile", {
+    [['/Building/bhatta1.png', '/Building/bhatta2.png', '/Building/bhatta3.png', '/Building/bhatta5.png'], "Bhatta Tile", {
+      ' ': ' '
     }, "16"],
     [['/Building/Special.png', '/Building/Special1.png'], "Tennis Sand", {
-
+      "Quantity Per Bag": "30 kg",
     }, "300"],
   ]
-  // "Ammount per bag": "30 kg",
+
   return (
     <>
       <section className='h-auto max-w-screen'>
@@ -101,15 +103,13 @@ export default function ChildComp2() {
       <section className='h-auto max-w-screen'>
         <h1 className='w-4/5 border text-center p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Others</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
-          {otherarray.map((data, i) => {
-            return <OtherCategory key={i} data={data}></OtherCategory>
-          })}
+          <OtherCategory data={otherarray[0]}></OtherCategory>
+          <TenisSand data={otherarray[1]}></TenisSand>
         </section>
       </section>
 
-      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[80vh] w-full md:w-11/12 mx-auto px-5 py-2 my-8">
-        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2
-     px-7 flex flex-col justify-center items-end gap-6">
+      <div className="flex xs:flex-col md:flex-row xs:h-auto md:h-[70vh] w-full md:w-4/5 mx-auto px-5 py-2 my-8">
+        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
           <div className="relative z-20 flex flex-col gap-5 w-full">
             <h1 className="text-5xl font-bold font-heading">Building Brick</h1>
             <p className="text-base font-medium w-full md:w-11/12 font-text">
