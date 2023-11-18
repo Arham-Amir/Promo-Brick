@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${glass.variable} ${figtree.variable} ${inter.className} overflow-x-hidden max-w-screen font-text bg-bg`}>
+      <body className={`${glass.variable} ${figtree.variable} ${inter.className} overflow-x-hidden max-w-screen font-text bg-bg scrollbar`}>
         <ContactPopUpBtn />
         <UpComingEvent />
         <Navbar />
