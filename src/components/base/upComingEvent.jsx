@@ -5,8 +5,12 @@ import LazyImage from "./lazyImage";
 const UpComingEvent = () => {
   return (
     <section className='relative'>
-      <button onClick={() => document.getElementById("upComingEvent").showModal()} className="fixed top-1/4 border right-0 z-40 bg-transparent bg-white vertical-text w-fit px-2 py-4 rounded-r-lg">
-        <p className='text-green-500' size={40} >UpComingEvent</p>
+      <button onClick={() => document.getElementById("upComingEvent").showModal()} className="shaky-component fixed bottom-10 border-4 left-4 z-40 bg-themeColor border-themeColor w-fit rounded-full">
+        {/* <p className='text-green-500 text-xs'>UpComingEvent</p> */}
+        <LazyImage
+          className="w-[35px] h-[35px] object-contain rounded-full"
+          src={"/images/event.jpg"}
+        />
       </button>
       <dialog id={`upComingEvent`} className="m-auto modal min-w-[80vw] max-w-[80vw] h-[85vh] md:h-[90vh]">
         <div className="modal-box flex flex-col gap-5 items-center w-full h-full">
