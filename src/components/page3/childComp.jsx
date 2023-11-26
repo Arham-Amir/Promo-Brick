@@ -68,10 +68,6 @@ const ChildComp = () => {
           'Name': 'Weathered',
           'Img': ['/Facing/wirecutWeathered1.png', '/Facing/wirecutWeathered2.png']
         },
-        {
-          'Name': 'Tiles',
-          'Img': ['/Facing/wirecutslips1.png', '/Facing/HandmadeHalfShaded2.png']
-        },
       ],
     },
     'Machine Press': {
@@ -88,10 +84,6 @@ const ChildComp = () => {
         {
           'Name': 'Weathered',
           'Img': ['/Facing/MachinePressWeathered1.png', '/Facing/MachinePressWeathered2.png']
-        },
-        {
-          'Name': 'Tiles',
-          'Img': ['/Facing/MachinePressTiles1.png', '/Facing/MachinePressTiles2.png']
         },
       ],
     },

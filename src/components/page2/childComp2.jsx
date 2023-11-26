@@ -39,7 +39,7 @@ export default function ChildComp2() {
       "Water Absorption Rate": "12.39 %",
       "Ultimate Stree (PSI)": "3200",
     }, "28"],
-    [['/Building/Khinger.png', '/Building/Awal1.png'], "Khinger Brick", {
+    [['/Building/Khinger1.png', '/Building/Khinger.png'], "Khinger Brick", {
       "Product Type": "B Class",
       "Weight": "3.25 Kg",
       "Dimension (L*W*D)": "9.0*4.5*3 Inch",
@@ -65,7 +65,7 @@ export default function ChildComp2() {
     [['/Building/bhatta1.png', '/Building/bhatta2.png', '/Building/bhatta3.png', '/Building/bhatta5.png'], "Bhatta Tile", {
       ' ': ' '
     }, "16"],
-    [['/Building/Special.png', '/Building/Special1.png'], "Tennis Sand", {
+    [['/Building/tenis3.jpg', '/Building/tenis1.jpg', '/Building/tenis2.jpg', '/Building/tenis4.jpg'], "Tennis Sand", {
       "Quantity Per Bag": "30 kg",
     }, "300"],
   ]
