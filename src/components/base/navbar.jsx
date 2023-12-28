@@ -47,8 +47,9 @@ const Navbar = () => {
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost normal-case text-xl">
-        <LazyImage className="h-full w-fit object-contain mr-1" src="/images/nav_logo.gif"/>
-        Promo Brick</Link>
+          <LazyImage className="h-full w-fit object-contain mr-1" src="/images/nav_logo.gif" />
+          Promo Brick
+        </Link>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1">

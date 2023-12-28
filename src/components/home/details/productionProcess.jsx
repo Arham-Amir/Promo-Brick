@@ -23,7 +23,6 @@ const ProductionProcess = (props = {}) => {
     {
       'name': 'BRICK PRODUCTION',
       'about': 'Basically the process of brick making has not changed since the first fired bricks were produced some thousand years ago.',
-      'duration': 'May 2018 - Present',
       'description': [
         'Securing the clay',
         'Beneficiation',
@@ -35,7 +34,6 @@ const ProductionProcess = (props = {}) => {
     {
       'name': 'SECURING THE CLAY',
       'about': 'Clays used in brick making represent a wide range of materials that include varying percentage of silica and alumina. They may be grouped in three classes.',
-      'duration': 'May 2018 - Present',
       'description': [
         'Surface Clay: Mostly bricks in Pakistan are made from surface clays, which are 3 to 4 feet in depth.',
         'Shale’s: These clays are obtained from decomposed rock, may he near mountain areas.',
@@ -45,7 +43,6 @@ const ProductionProcess = (props = {}) => {
     {
       'name': 'BENIFICATION',
       'about': 'Raw clays are often blended to obtain a uniform consistency. The clay is then passed from grinders and screens to secure the optimum particle size for mixing with water.',
-      'duration': 'May 2018 - Present',
       'description': [
 
       ]
@@ -53,24 +50,21 @@ const ProductionProcess = (props = {}) => {
     {
       'name': 'MIXING & FORMING',
       'about': '',
-      'duration': 'May 2018 - Present',
       'description': [
         "Extruded Bricks: In this stiff mud process the clay is mixed with water to render its plastic after which it is forced through a die that extrudes a column of clay like toothpaste. The column gives two dimensions of the unit: it is cut by the wire to give the third dimension.",
-      "Molded Bricks: The older method of forming the brick, the soft mud process much more water is used. The mix is put in wooden or steals moulds to form the size unit required. Moulds are lubricated with sand or water. These are called sand struck or water struck bricks.",
-      "Pressed bricks: Clays with very low plasticity are used in the dry press-process.",
+        "Molded Bricks: The older method of forming the brick, the soft mud process much more water is used. The mix is put in wooden or steals moulds to form the size unit required. Moulds are lubricated with sand or water. These are called sand struck or water struck bricks.",
+        "Pressed bricks: Clays with very low plasticity are used in the dry press-process.",
       ]
     },
     {
       'name': 'DRYING',
       'about': 'After the bricks are formed, they must be dried to remove as much as free water as possible. Drying a part from sun drying is done in direct dryers with controlled temperatures draft and humidity.',
-      'duration': 'May 2018 - Present',
       'description': [
       ]
     },
     {
       'name': 'FIRING & COOLING',
       'about': 'Bricks are fired and cooled in a kiln an oven type chamber capable of producing temperatures 870C to 1100C (1600-2000f) Depending on the type of raw material.',
-      'duration': 'May 2018 - Present',
       'description': [
         'Periodic',
         'Continuous'
@@ -79,7 +73,6 @@ const ProductionProcess = (props = {}) => {
     {
       'name': 'QUALITY CONTROL',
       'about': 'The testing of materials is one of the important requirements of civil work from quality control point of view.',
-      'duration': 'May 2018 - Present',
       'description': [
         "CRUSHING STRENGTH TEST",
         "WATER ABSORPTION TEST",
@@ -129,7 +122,6 @@ const ProductionProcess = (props = {}) => {
             <section className="expDetail xs:w-full md:w-auto flex flex-col gap-1 font-text">
               <h1 className="text-2xl font-semibold text-black font-heading">{experiences[curexp]['name']}</h1>
               <h1 className="text-sm 2xl:text-2xl text-black md:w-4/5">{experiences[curexp]['about']}</h1>
-              <p className="font-themeFont text-bgDark text-xs 2xl:text-base"> {experiences[curexp]['duration']}</p>
               <ProductionProcessDetail data={experiences[curexp]['description']} />
             </section>
           </section>
