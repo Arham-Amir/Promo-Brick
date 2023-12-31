@@ -29,22 +29,22 @@ const UpComingEvent = () => {
               />
               <section className="p-2 flex flex-col gap-1">
                 <section className="flex mb-2 items-center justify-center flex-col">
-                  <h1 className="text-xs ms:text-sm text-center">We Are Coming At:</h1>
+                  <h1 className="text-xs md:text-sm text-center">We Are Coming At:</h1>
                   <p className="md:text-2xl uppercase font-heading font-extrabold">COTTAGE Industry EXPO-24</p>
                 </section>
                 <section className="flex flex-col gap-1 items-center md:items-end justify-center">
-                  <h1 className="font-bold text-xs ms:text-sm">Venue:</h1>
-                  <p className="text-xs ms:text-sm">Expo Center Johar Town, Lahore</p>
+                  <h1 className="font-bold text-xs md:text-sm">Venue:</h1>
+                  <p className="text-xs md:text-sm">Expo Center Johar Town, Lahore</p>
                 </section>
                 <section className="flex gap-2 justify-center md:justify-end">
-                  <h1 className="font-bold text-xs ms:text-sm">JANUARY 5, 6, 7</h1>
+                  <h1 className="font-bold text-xs md:text-sm">JANUARY 7, 8, 9</h1>
                 </section>
                 <section className="flex gap-2 justify-center md:justify-end">
-                  <h1 className="font-bold text-xs ms:text-sm">2024</h1>
+                  <h1 className="font-bold text-xs md:text-sm">2024</h1>
                 </section>
                 <section className="flex flex-col md:flex-row gap-1 items-center justify-center md:justify-end">
-                  <h1 className="font-bold text-xs ms:text-sm">Time:</h1>
-                  <p className="text-xs ms:text-sm">12 PM to 8 PM</p>
+                  <h1 className="font-bold text-xs md:text-sm">Time:</h1>
+                  <p className="text-xs md:text-sm">12 PM to 8 PM</p>
                 </section>
               </section>
             </section>
