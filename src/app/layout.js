@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ContactPopUpBtn from '@components/base/contactPopUpBtn'
 import UpComingEvent from '@components/base/upComingEvent'
 import ShowEvent from '@components/base/showEvent'
+import { ToastContainer } from 'react-toastify';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${glass.variable} ${figtree.variable} ${inter.className} overflow-x-hidden max-w-screen font-text bg-bg scrollbar`}>
+        <ToastContainer></ToastContainer>
         <ShowEvent />
         <ContactPopUpBtn />
         <UpComingEvent />
