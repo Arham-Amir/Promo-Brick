@@ -3,7 +3,6 @@
 import { MdLocationPin } from 'react-icons/md'
 import { FaPhoneAlt } from 'react-icons/fa'
 import { SiMinutemailer } from 'react-icons/si'
-import { BiWorld } from 'react-icons/bi'
 import ContactLeft from './contactLeft'
 import ContactRight from './contactRight'
 import ContactInfo from './contactInfo'

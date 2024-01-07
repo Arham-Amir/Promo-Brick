@@ -56,7 +56,7 @@ const CategoryDetails = (props = {}) => {
         </section>
         <button onClick={() => document.getElementById(props.data[1]).showModal()} className='rounded-lg bg-themeColor text-black  px-3 py-2 w-fit text-sm'>Place Order</button>
       </section>
-      <dialog id={`${props.data[1]}`} className="m-auto modal min-w-[80vw] max-w-[80vw]  h-[80vh] lg:h-fit">
+      <dialog id={`${props.data[1]}`} className="m-auto modal min-w-[80vw] max-w-[80vw] h-[80vh] lg:h-fit">
         <ToastContainer />
         <div className="modal-box flex flex-col gap-5 items-center w-full h-full">
           <form method="dialog">
@@ -99,7 +99,7 @@ const CategoryDetails = (props = {}) => {
             </section>
             <section className='flex flex-col ms:flex-row justify-around gap-1'>
               <p className="text-base ms:text-2xl font-heading font-bold">Total Price:</p>
-              <p className='ms:text-lg font-bold px-4 py-1'>{number * props.data[3]}-/Pkr</p>
+              <p className='ms:text-lg font-bold px-4 py-1'>{props.data[2]["Price"] * number}-/Pkr</p>
             </section>
             <section className='flex flex-row justify-around gap-1'>
               <button onClick={handleSubmitClick} className='btn-sm md:btn-md btn border-0 bg-themeColor'>Confirm Order</button>
