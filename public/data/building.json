@@ -1,0 +1,128 @@
+{
+  "updateDate":"20th December, 2023",
+  "contentarray" : [
+    [
+      ["/Building/Awal.png", "/Building/Awal2.png", "/Building/Awal1.png"
+      ],
+      "Awal Bricks",
+      {
+        "Product Type": "A Class",
+        "Weight": "3.25kg",
+        "Dimensions (L*W*D)": "9.0*4.5*3 Inches",
+        "Water Absorption Rate": "13.79%",
+        "Ultimate Stree": "2000"
+      },
+      "16"
+    ],
+    [
+      ["/Building/Special.png", "/Building/Special2.png", "/Building/Special1.png"
+      ],
+      "Special Brick",
+      {
+        "Product Type": "A+ Class",
+        "Weight": "3.25 Kg",
+        "Dimension (L*W*D)": "9.0*4.5*3",
+        "Water Absorption Rate": "12.74 %",
+        "Ultimate Stree (PSI)": "2300"
+      },
+      "20"
+    ],
+    [
+      ["/Building/Doum.png", "/Building/Doum1.png"
+      ],
+      "Doum Brick",
+      {
+        "Product Type": "B Class",
+        "Weight": "3.25 Kg",
+        "Dimension (L*W*D)": "9.0*4.5*3 Inch",
+        "Water Absorption Rate": "15.63 %",
+        "Ultimate Stree (PSI)": "1500"
+      },
+      "12.5"
+    ],
+    [
+      ["/Building/PSK.png", "/Building/PSK2.png", "/Building/PSK1.png"
+      ],
+      "Premium Brick",
+      {
+        "Product Type": "A++ Class",
+        "Weight": "3.25 Kg",
+        "Dimension (L*W*D)": "9.0*4.5*3 (+-, .1)",
+        "Water Absorption Rate": "12.39 %",
+        "Ultimate Stree (PSI)": "3200"
+      },
+      "28"
+    ],
+    [
+      ["/Building/Khinger1.png", "/Building/Khinger.png"
+      ],
+      "Khinger Brick",
+      {
+        "Product Type": "B Class",
+        "Weight": "3.25 Kg",
+        "Dimension (L*W*D)": "9.0*4.5*3 Inch",
+        "Water Absorption Rate": "15.63 %",
+        "Ultimate Stree (PSI)": "2100"
+      },
+      "12.5"
+    ]
+  ],
+  "gutkaarray" : [
+    [
+      [
+        "/Building/gutka1.png"
+      ],
+      "Gutka 1",
+      {
+        "Price": "14"
+      }
+    ],
+    [
+      [
+        "/Building/gutka2.png"
+      ],
+      "Gutka 2",
+      {
+        "Price": "14"
+      }
+    ],
+    [
+      [
+        "/Building/gutka3.png"
+      ],
+      "Gutka 3",
+      {
+        "Price": "14"
+      }
+    ],
+    [
+      [
+        "/Building/gutka4.png"
+      ],
+      "Gutka 4",
+      {
+        "Price": "14"
+      }
+    ]
+  ],
+  "otherarray" : [
+    [
+      ["/Building/bhatta1.png", "/Building/bhatta2.png", "/Building/bhatta3.png", "/Building/bhatta5.png"
+      ],
+      "Bhatta Tile",
+      {
+      " ": " "
+      },
+      "16"
+    ],
+    [
+      ["/Building/tenis3.jpg", "/Building/tenis1.jpg", "/Building/tenis2.jpg", "/Building/tenis4.jpg"
+      ],
+      "Tennis Sand",
+      {
+        "Quantity Per Bag": "30 kg"
+      },
+      "300"
+    ]
+  ]
+}
