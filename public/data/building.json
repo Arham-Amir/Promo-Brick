@@ -25,7 +25,7 @@
         "Water Absorption Rate": "12.74 %",
         "Ultimate Stree (PSI)": "2300"
       },
-      "20"
+      "19"
     ],
     [
       ["/Building/Doum.png", "/Building/Doum1.png"
@@ -38,7 +38,7 @@
         "Water Absorption Rate": "15.63 %",
         "Ultimate Stree (PSI)": "1500"
       },
-      "12.5"
+      "12"
     ],
     [
       ["/Building/PSK.png", "/Building/PSK2.png", "/Building/PSK1.png"
@@ -51,7 +51,7 @@
         "Water Absorption Rate": "12.39 %",
         "Ultimate Stree (PSI)": "3200"
       },
-      "28"
+      "25"
     ],
     [
       ["/Building/Khinger1.png", "/Building/Khinger.png"
@@ -64,7 +64,7 @@
         "Water Absorption Rate": "15.63 %",
         "Ultimate Stree (PSI)": "2100"
       },
-      "12.5"
+      "12"
     ]
   ],
   "gutkaarray" : [
