@@ -1,5 +1,5 @@
 {
-  "updateDate":"19th January, 2024",
+  "updateDate":"6th March, 2024",
   "contentarray" : [
     [
       ["/Building/Awal.png", "/Building/Awal2.png", "/Building/Awal1.png"
@@ -12,7 +12,7 @@
         "Water Absorption Rate": "13.79%",
         "Ultimate Stree": "2000"
       },
-      "16"
+      "19"
     ],
     [
       ["/Building/Special.png", "/Building/Special2.png", "/Building/Special1.png"
@@ -25,7 +25,7 @@
         "Water Absorption Rate": "12.74 %",
         "Ultimate Stree (PSI)": "2300"
       },
-      "19"
+      "22"
     ],
     [
       ["/Building/Doum.png", "/Building/Doum1.png"
@@ -38,7 +38,7 @@
         "Water Absorption Rate": "15.63 %",
         "Ultimate Stree (PSI)": "1500"
       },
-      "12"
+      "14"
     ],
     [
       ["/Building/PSK.png", "/Building/PSK2.png", "/Building/PSK1.png"
@@ -51,7 +51,7 @@
         "Water Absorption Rate": "12.39 %",
         "Ultimate Stree (PSI)": "3200"
       },
-      "25"
+      "30"
     ],
     [
       ["/Building/Khinger1.png", "/Building/Khinger.png"
@@ -64,7 +64,7 @@
         "Water Absorption Rate": "15.63 %",
         "Ultimate Stree (PSI)": "2100"
       },
-      "12"
+      "16"
     ]
   ],
   "gutkaarray" : [
@@ -74,7 +74,7 @@
       ],
       "Gutka 1",
       {
-        "Price": "14"
+        "Price": "15"
       }
     ],
     [
@@ -83,7 +83,7 @@
       ],
       "Gutka 2",
       {
-        "Price": "14"
+        "Price": "15"
       }
     ],
     [
@@ -92,7 +92,7 @@
       ],
       "Gutka 3",
       {
-        "Price": "14"
+        "Price": "15"
       }
     ],
     [
@@ -101,7 +101,7 @@
       ],
       "Gutka 4",
       {
-        "Price": "14"
+        "Price": "15"
       }
     ]
   ],
