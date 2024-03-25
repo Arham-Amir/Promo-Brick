@@ -31,9 +31,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${glass.variable} ${figtree.variable} ${inter.className} overflow-x-hidden max-w-screen font-text bg-bg scrollbar`}>
         <ToastContainer></ToastContainer>
-        <ShowEvent />
+        {/* <ShowEvent /> */}
         <ContactPopUpBtn />
-        <UpComingEvent />
+        {/* <UpComingEvent /> */}
         <Navbar />
         {children}
         <ContactUs />
