@@ -20,6 +20,13 @@ const Footer = () => {
           <LazyImage className="h-[80px] md:h-[90px] 2xl:h-[120px] p-3 w-full object-contain hover:-translate-y-2 md:hover:border-t-4 border-themeColor transition-all duration-75" src="/logos/promofarms.gif"/>
         </a>
       </section>
+      <section className="border-t-2 border-white py-1 w-11/12 mx-auto text-white flex flex-col gap-2">
+        <section className="flex md:flex-row gap-7 justify-center items-center w-fit mx-auto text-white">
+        <LazyImage className="w-1/6 h-auto drop-shadow-2xl" src="/images/sedex.png"/>
+        <LazyImage className="w-1/6 h-auto drop-shadow-2xl" src="/images/iso9001.png"/>
+        <LazyImage className="w-1/6 h-auto drop-shadow-2xl" src="/images/iso14001.png"/>
+        </section>
+      </section>
       <section className="border-b-2 py-3 w-11/12 mx-auto text-white flex flex-col gap-2">
         <h2 className="text-lg w-fit mx-auto  pb-1">Follow us on</h2>
         <section className="flex flex-row gap-7 items-center w-fit mx-auto py-2 text-white">

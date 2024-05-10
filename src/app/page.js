@@ -9,7 +9,7 @@ export default function Home() {
       <Carousel />
       <Categories />
       <Details />
-      <Video />
+      {/* <Video /> */}
     </section>
   )
 }
