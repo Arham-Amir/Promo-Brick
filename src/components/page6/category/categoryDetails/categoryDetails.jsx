@@ -2,6 +2,7 @@ const CategoryDetails = (props = {}) => {
   return (
     <section className='h-full flex flex-col justify-between items-center gap-3 p-5'>
       <h1 className='text-themeColor text-3xl font-heading text-center'>{props.data[0]}</h1>
+                <h2>Item Code - {props.data[3]}</h2>
       <div className='text-base mt-2'>
         <section className="w-full">
           <section className='w-auto'>

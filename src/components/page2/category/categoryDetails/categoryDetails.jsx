@@ -58,8 +58,8 @@ const CategoryDetails = (props = {}) => {
           </section>
         </section>
       </div>
-      <h2 className='text-themeColor text-3xl'>PKR {props.data[3]}</h2>
-      <h2 className='text-themeColor text-sm'>Total Price {(props.data[3] * number).toLocaleString()}</h2>
+      {/* <h2 className='text-themeColor text-3xl'>PKR {props.data[3]}</h2>
+      <h2 className='text-themeColor text-sm'>Total Price {(props.data[3] * number).toLocaleString()}</h2> */}
       <section className='flex flex-col ms:flex-row items-center justify-center gap-2'>
         <section className="rounded-lg flex flex-row items-center border-2 border-bgLight justify-between p-2 w-fit mx-2">
           <button className='text-sm' onClick={() => decrementNumber()}>

@@ -12,126 +12,126 @@ export default function ChildComp6() {
       "Size": '12"/14"',
       "Color": "Natural",
       "Notes": "Sets of 2 pots"
-    }, ["/Pots/1.jpg"]],
+    }, ["/Pots/1.jpg"], "PB-K-017S"],
     ["Simple plain in bottle shaped", {
       "Size": '12"/14"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/2.jpg"]],
+    }, ["/Pots/2.jpg"], "PB-K-017S"],
     ["Simple plain with roop style", {
       "Size": '12"/14"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/3.jpg"]],
+    }, ["/Pots/3.jpg"], "PB-K-017S"],
     ["Simple plain in Bowl Shape", {
       "Size": '10"/08"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/4.jpg"]],
+    }, ["/Pots/4.jpg"], "PB-K-017S"],
     ["Simple plain with lines", {
       "Size": '14"18"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/5.jpg"]],
+    }, ["/Pots/5.jpg"], "PB-K-017S"],
     ["Simple plain", {
       "Size": '16"/16"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/6.jpg"]],
+    }, ["/Pots/6.jpg"], "PB-K-017S"],
     ["Simple plain with leaf desgined", {
       "Size": '18"-12"/16"-10"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/7.jpg"]],
+    }, ["/Pots/7.jpg"], "PB-K-017S"],
     ["Simple plain Rounded", {
       "Size": '18"-12"/18"-12"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/8.jpg"]],
+    }, ["/Pots/8.jpg"], "PB-K-017S"],
     ["Simple plain with leaf desgined", {
       "Size": '12"12"',
       "Color": "Natural",
       "Notes": "Sets of 4 pots"
-    }, ["/Pots/9.jpg"]],
+    }, ["/Pots/9.jpg"], "PB-K-017S"],
     ["Simple plain", {
       "Size": '14"/16"',
       "Color": "Natural",
       "Notes": "Sets of 4 pots"
-    }, ["/Pots/10.jpg"]],
+    }, ["/Pots/10.jpg"], "PB-K-017S"],
     ["Simple Plain with Ring Rope Stylr", {
       "Size": '22"-12"/18"-12"',
       "Color": "Natural",
       "Notes": "Sets of 4 pots"
-    }, ["/Pots/11.jpg"]],
+    }, ["/Pots/11.jpg"], "PB-K-017S"],
     ["Simple plain in Conical shaped", {
       "Size": '24"/28"',
       "Color": "Natural",
       "Notes": "Sets of 5 pots"
-    }, ["/Pots/13.jpg"]],
+    }, ["/Pots/13.jpg"], "PB-K-017S"],
     ["Simple plain with Ring style", {
       "Size": '24"-12"/20"-08"',
       "Color": "Natural",
       "Notes": "Sets of 5 pots"
-    }, ["/Pots/14.jpg"]],
+    }, ["/Pots/14.jpg"], "PB-K-017S"],
     ["Simple plain in Cylinderical shape with Saucers", {
       "Size": '18"-8"/16"-8"',
       "Color": "Natural",
       "Notes": "Sets of 5 pots"
-    }, ["/Pots/12.jpg"]],
+    }, ["/Pots/12.jpg"], "PB-K-017S"],
   ]
   const specialPots = [
     ["Special Painted", {
       "Size": '16"/18"',
       "Color": "White Painted",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/18.jpg"]],
+    }, ["/Pots/18.jpg"], "PB-K-017S"],
     ["Special Painted", {
       "Size": '16"/18"',
       "Color": "White Painted",
       "Notes": "Sets of 4 pots"
-    }, ["/Pots/19.jpg"]],
+    }, ["/Pots/19.jpg"], "PB-K-017S"],
     ["Plain Painted", {
       "Size": '16"-8"/12"-8"',
       "Color": "Painted",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/24.jpg"]],
+    }, ["/Pots/24.jpg"], "PB-K-017S"],
     ["Bowl shaped with handle", {
       "Size": '12"/06"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/22.jpg"]],
+    }, ["/Pots/22.jpg"], "PB-K-017S"],
     ["Leaf style with special texture", {
       "Size": '14"/12"',
       "Color": "Textured",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/23.jpg"]],
+    }, ["/Pots/23.jpg"], "PB-K-017S"],
     ["Special Desgined Narrow base", {
       "Size": '20"/26"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/20.jpg"]],
+    }, ["/Pots/20.jpg"], "PB-K-017S"],
     ["Special Desgined Narrow base wirh color style", {
       "Size": '16"24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/17.jpg"]],
+    }, ["/Pots/17.jpg"], "PB-K-017S"],
   ]
   const urnPots = [
     ["Bottle Shapped Urn", {
       "Size": '08"/24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/15.jpg"]],
+    }, ["/Pots/15.jpg"], "PB-K-017S"],
     ["Special Desgined Urn with Handle", {
       "Size": '10"/24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/16.jpg"]],
+    }, ["/Pots/16.jpg"], "PB-K-017S"],
     ["Fancy Urn with special texture", {
       "Size": '10"/24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/21.jpg"]],
+    }, ["/Pots/21.jpg"], "PB-K-017S"],
   ]
   return (
     <>
@@ -184,7 +184,7 @@ export default function ChildComp6() {
         </div>
         <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
           <LazyImage
-             className="h-full w-full object-cover rounded-lg" src="/Pots/pots.jpg" />
+            className="h-full w-full object-cover rounded-lg" src="/Pots/pots.jpg" />
         </div>
       </div>
 

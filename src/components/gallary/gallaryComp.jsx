@@ -126,19 +126,19 @@ const GallaryComp = () => {
         </section>
       </section>
       <section className='mb-10'>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Facing Brick</h1>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Facing Bricks & Slips</h1>
         <section>
           <Slider data={facingBrickImages} />
         </section>
       </section>
-      <section className='mb-10'>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Clay Tiles</h1>
+      <section className='mb-10'>        
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Design Borders</h1>
         <section>
           <Slider data={clayImages} />
         </section>
       </section>
       <section className='mb-10'>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Brick Slips</h1>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>Clay Tiles</h1>
         <section>
           <Slider data={slipImages} />
         </section>

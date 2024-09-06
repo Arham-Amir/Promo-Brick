@@ -34,9 +34,9 @@ const Navbar = () => {
               <a className={`${path == "/page2" || path == "/page3" || path == "/page4" || path == "/page5" || path == "/page6" ? 'font-bold text-themeColor' : 'font-normal'} cursor-pointer hover:scale-110 transition duration-100 hover:text-themeColor`}>Products</a>
               <ul className="p-2 z-30">
                 <li><Link href="/page2" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Buildings Bricks</Link></li>
-                <li><Link href="/page3" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Facing Bricks</Link></li>
+                <li><Link href="/page3" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Facing Bricks & Slips</Link></li>
                 <li><Link href="/page5" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Clay Tiles</Link></li>
-                <li><Link href="/page4" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Brick Slips</Link></li>
+                <li><Link href="/page4" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Design Borders</Link></li>
                 <li><Link href="/page6" className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Pots</Link></li>
               </ul>
             </li>
@@ -59,9 +59,9 @@ const Navbar = () => {
               <summary className={`${path == "/page2" || path == "/page3" || path == "/page4" || path == "/page5" || path == "/page6" ? 'scale-110 font-bold text-themeColor' : 'scale-100 font-normal'} cursor-pointer  hover:scale-110 transition duration-100 hover:text-themeColor`} onClick={() => setDropdownOpen(!dropdownOpen)} >Products</summary>
               {dropdownOpen && (<ul className="p-2 z-30 min-w-max">
                 <li ><Link href="/page2" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Buildings Bricks</Link></li>
-                <li ><Link href="/page3" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Facing Bricks</Link></li>
+                <li ><Link href="/page3" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Facing Bricks & Slips</Link></li>
                 <li ><Link href="/page5" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Clay Tiles</Link></li>
-                <li ><Link href="/page4" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Brick Slips</Link></li>
+                <li ><Link href="/page4" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Design Borders</Link></li>
                 <li ><Link href="/page6" onClick={() => setDropdownOpen(false)} className="cursor-pointer min-w-fit hover:scale-110 transition duration-100 hover:text-themeColor">Pots</Link></li>
               </ul>)}
             </details>
