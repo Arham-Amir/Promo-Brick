@@ -52,7 +52,7 @@ const ChildComp = () => {
         </div>
         <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
           <LazyImage
-            src="/BrickSlips/brickSlips.png"
+            src="/Facing/facing.jpg"
             className="h-full w-full object-cover rounded-lg"
           />
         </div>
