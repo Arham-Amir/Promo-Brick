@@ -58,7 +58,7 @@ export default function ChildComp6() {
       "Color": "Natural",
       "Notes": "Sets of 4 pots"
     }, ["/Pots/10.jpg"], "PB-K-011S"],
-    ["Simple Plain with Ring Rope Stylr", {
+    ["Simple Plain with Ring Rope Style", {
       "Size": '22"-12"/18"-12"',
       "Color": "Natural",
       "Notes": "Sets of 4 pots"
@@ -67,44 +67,44 @@ export default function ChildComp6() {
       "Size": '24"/28"',
       "Color": "Natural",
       "Notes": "Sets of 5 pots"
-    }, ["/Pots/13.jpg"], "PB-018S"],
+    }, ["/Pots/13.jpg"], "PB-K-002S"],
     ["Simple plain with Ring style", {
       "Size": '24"-12"/20"-08"',
       "Color": "Natural",
       "Notes": "Sets of 5 pots"
-    }, ["/Pots/14.jpg"], "PB-020S"],
+    }, ["/Pots/14.jpg"], "PB-018S"],
     ["Simple plain in Cylinderical shape with Saucers", {
       "Size": '18"-8"/16"-8"',
       "Color": "Natural",
       "Notes": "Sets of 5 pots"
-    }, ["/Pots/12.jpg"], "PB-K-002S"],
+    }, ["/Pots/12.jpg"], "PB-020S"],
   ]
   const specialPots = [
     ["Special Painted", {
       "Size": '16"/18"',
       "Color": "White Painted",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/18.jpg"], "PB-K-009SPL"],
+    }, ["/Pots/18.jpg"], "PB-K-013SP"],
     ["Special Painted", {
       "Size": '16"/18"',
       "Color": "White Painted",
       "Notes": "Sets of 4 pots"
-    }, ["/Pots/19.jpg"], "PB-K-015FC"],
+    }, ["/Pots/19.jpg"], "PB-K-016SP"],
     ["Plain Painted", {
       "Size": '16"-8"/12"-8"',
       "Color": "Painted",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/24.jpg"], "PB-K-030FC"],
+    }, ["/Pots/24.jpg"], "PB-028SP"],
     ["Bowl shaped with handle", {
       "Size": '12"/06"',
       "Color": "Natural",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/22.jpg"], "PB-K-008SPL"],
+    }, ["/Pots/22.jpg"], "PB-K-009SPL"],
     ["Leaf style with special texture", {
       "Size": '14"/12"',
       "Color": "Textured",
       "Notes": "Sets of 3 pots"
-    }, ["/Pots/23.jpg"], "PB-K-010SPL"],
+    }, ["/Pots/23.jpg"], "PB-K-015FC"],
     ["Special Desgined Narrow base", {
       "Size": '20"/26"',
       "Color": "Natural",
@@ -114,24 +114,24 @@ export default function ChildComp6() {
       "Size": '16"24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/17.jpg"], "PB-028SP"],
+    }, ["/Pots/17.jpg"], "PB-P-014S"],
   ]
   const urnPots = [
     ["Bottle Shapped Urn", {
       "Size": '08"/24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/15.jpg"], "PB-K-013SP"],
+    }, ["/Pots/15.jpg"], "PB-K-008SPL"],
     ["Special Desgined Urn with Handle", {
       "Size": '10"/24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/16.jpg"], "PB-K-016SP"],
+    }, ["/Pots/16.jpg"], "PB-K-010SPL"],
     ["Fancy Urn with special texture", {
       "Size": '10"/24"',
       "Color": "Natural",
       "Notes": "Single"
-    }, ["/Pots/21.jpg"], "PB-P-014S"],
+    }, ["/Pots/21.jpg"], "PB-K-030FC"],
   ]
   return (
     <>
@@ -158,7 +158,7 @@ export default function ChildComp6() {
             return <Category key={i} data={data}></Category>
           })}
         </section>
-        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>URN Pots</h1>
+        <h1 className='w-4/5 border text-center mt-5 p-5 text-5xl mx-auto font-heading font-bold heading-bg'>URN</h1>
         <section className='flex flex-row flex-wrap justify-center p-5 md:p-10 gap-y-5 w-full'>
           {urnPots.map((data, i) => {
             return <Category key={i} data={data}></Category>

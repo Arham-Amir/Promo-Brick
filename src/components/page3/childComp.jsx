@@ -36,7 +36,7 @@ const ChildComp = () => {
       'desc': "Craftspeople with great talent create handmade bricks by depositing a clay \"clot\" into a sanded mold. As a result, the product has a tighter texture than its machine-made counterparts and has personality and uniqueness.",
       'data': [
         {
-          'Name': 'Smooth Red',
+          'Name': 'Simple',
           'Img': ['/Facing/HandmadeSmoothRed1.png', '/Facing/HandmadeSmoothRed2.png']
         },
         {
@@ -95,19 +95,19 @@ const ChildComp = () => {
         <Types data={Object.keys(data)} settype={(t) => settype(t)} type={type} />
         <SelectedType data={data[type]} type={type} />
       </section>
-      <div className="bg-white flex md:flex-row xs:flex-col xs:h-auto md:h-[70vh] w-full md:w-4/5 mx-auto px-5 py-2 my-8">
-        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full md:w-1/2 px-7 flex flex-col justify-center items-end gap-6">
-          <div className="relative z-20 flex flex-col gap-5 w-full">
+      <div className="bg-white flex md:flex-row xs:flex-col justify-center items-center xs:h-auto w-full md:w-4/5 mx-auto px-5 py-2 my-8">
+        <div className="relative xs:h-fit xs:py-8 md:py-0 md:h-full xs:w-full px-7 flex flex-col justify-center items-end gap-6">
+          <div className="relative z-20 flex flex-col gap-5 w-full text-center">
             <h1 className="text-5xl font-bold font-heading">Facing Brick & Slip</h1>
             <p className="text-base font-medium w-full md:w-11/12 font-text">
               Facing Brick & Slip, as the name implies, are manufactured to be used as facing, i.e. as the exterior of the wall. These bricks are different from other structural brickwork and carry a very clean and even appearance. Since their primary use is to make the look of the building aesthetic and pleasant, Facing Bricks & Slips are made of different kinds of materials, mainly clay.
             </p>
           </div>
         </div>
-        <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
+        {/* <div className="xs:h-[40vh] ms:h-[60vh] md:h-full xs:w-full md:w-1/2 md:py-16 px-1">
           <LazyImage
            className="h-full w-full object-cover  rounded-lg" src="/BrickSlips/brickSlips.png"/>
-        </div>
+        </div> */}
       </div>
     </>
   );
